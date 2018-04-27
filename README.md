@@ -1,4 +1,4 @@
-# Bootstrap3-Starter-Kit
+# Bootstrap3 Starter Kit
 
 Introduction
 ------------
