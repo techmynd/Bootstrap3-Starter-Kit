@@ -1,6 +1,26 @@
+/*######################*/
+/*Minimal Media Queries*/
+/*######################*/
 
+@media all and (max-width:480px){
 
-/*Extensive Queries*/
+}
+
+@media all and (max-width:767px){
+
+}
+
+@media all and (max-width:991px){
+
+}
+
+@media all and (max-width:1199px){
+	
+}
+
+/*#######################*/
+/*Extensive Media Queries*/
+/*#######################*/
 
 @media screen and (max-width: 319px) {
 
