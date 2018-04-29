@@ -2,19 +2,23 @@
 /*Minimal Media Queries*/
 /*######################*/
 
-@media all and (max-width:480px){
+@media all and (max-width:480px) {
+	.owl-dots {margin-top: 10px;}
+	.owl-nav {
+		/*bcoz in mobile view dots add extra height - more than image height so we use 40% instead of 50% top*/
+		top: 40%; 
+	}
+}
+
+@media all and (max-width:767px) {
 
 }
 
-@media all and (max-width:767px){
+@media all and (max-width:991px) {
 
 }
 
-@media all and (max-width:991px){
-
-}
-
-@media all and (max-width:1199px){
+@media all and (max-width:1199px) {
 	
 }
 

@@ -1,5 +1,11 @@
 $(document).ready(function() {
-   
+  
+  /*just toggle*/
+  $('.toggleTrigger').click(function(event) {
+    event.preventDefault();
+    $('.toggleWrap').slideToggle();
+  });
+
 });
 
 
@@ -26,3 +32,14 @@ var wow = new WOW(
 );
 wow.init();
 */
+
+
+/*Plain JS*/
+
+/*Year for Footer*/
+function showCurrentYear() {
+  var yearFormula = new Date().getFullYear();
+  return yearFormula;
+}
+document.getElementById("yearJS").innerHTML = showCurrentYear();
+
