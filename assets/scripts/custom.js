@@ -6,6 +6,20 @@ $(document).ready(function() {
     $('.toggleWrap').slideToggle();
   });
 
+  /*Collapsable*/
+  // $(".collapsable h3").on('click', function(event){
+  //   event.preventDefault();
+  //   $(this).closest('.collapsable').find('.collapse').stop().slideToggle('fast');
+  //   $(this).closest('.collapsable').find('.h3 span').stop().toggleClass('fa-angle-down fa-angle-up');
+  // });
+
+  /*Categories Panel Collapsable*/
+  // $(".collapsable a").on('click', function(event){
+  //   event.preventDefault();
+  //   $(this).closest('.collapsable').find('.nav-tab-line').stop().slideToggle('fast');
+  //   $(this).closest('.collapsable').find('.check-circle span').stop().toggleClass('fa-angle-right fa-angle-down');
+  // });
+
 });
 
 

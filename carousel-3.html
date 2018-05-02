@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Homepage</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <link href="assets/styles/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/styles/bootstrap-theme.min.css" rel="stylesheet">
+
+    <link href="assets/styles/flexslider.css" rel="stylesheet">
+    <link href="assets/styles/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/styles/owl.theme.default.min.css" rel="stylesheet">
+    <link href="assets/styles/font-awesome.min.css" rel="stylesheet">
+
+    <link href="assets/styles/hover-min.css" rel="stylesheet">
+    <link href="assets/styles/animate.css" rel="stylesheet">
+    <link href="assets/styles/custom.css" rel="stylesheet">
+    <link href="assets/styles/responsive.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+    <!--
+    .sticky-footer sticks footer to bottom
+    .navbar-fixed-top-custom sticks header to top and adds padding from top for content
+    .pg-wrapper is like second body coz we can not apply classes to body - but we can have div with .pg-wrapper in every partial pages that will be called in main index template
+    -->
+    <div class="pg-wrapper sticky-footer navbar-fixed-top-custom">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">SiteLogo</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Owl Carousel <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="carousel.html">Single / Random Height / images</a></li>
+                <li><a href="carousel-2.html">Single / Screen Height / BGs</a></li>
+                <li><a href="carousel-3.html">Multiple Sliders / images</a></li>
+              </ul>
+            </li>
+            <li><a href="slider2.html">FlexSlider</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Components <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Products Grid</a></li>
+                <li><a href="#">Form</a></li>
+                <li><a href="#">Fontawesome</a></li>
+                <li><a href="#">Text Effects</a></li>
+                <li><a href="#">WOW Animations</a></li>
+                <li><a href="#">VH Centered Elements</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Post</a></li>
+                <li><a href="#">Go To Links</a></li>
+                <li><a href="#">Modal</a></li>
+                <li><a href="#">Accordion</a></li>
+                <li><a href="#">Custom Multiple Collapse</a></li>
+                <li><a href="#">Sliding Div</a></li>
+                <li><a href="#">Sliding Left Menu</a></li>
+                <li><a href="#">Data Table</a></li>
+                <li><a href="#">Misc.</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user fa-fw"></i> Settings <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <br><br>
+
+    <div class="sliderWrap">
+      <div id="owl-logos" class="owl-carousel owl-theme owl-logos">
+        <div class="item">
+          <img src="assets/images/slider-1.jpg" class="img-responsive center-block">
+        </div>
+        <div class="item">
+          <img src="assets/images/slider-2.jpg" class="img-responsive center-block">
+        </div>
+        <div class="item">
+          <a href="#">
+            <img src="assets/images/slider-3.jpg" class="img-responsive center-block">
+          </a>
+        </div>
+        <div class="item">
+          <img src="assets/images/1.png" class="img-responsive center-block">
+        </div>
+        <div class="item">
+          <a href="#">
+            <img src="assets/images/2.png" class="img-responsive center-block">
+          </a>
+        </div>
+        <div class="item">
+          <img src="assets/images/3.png" class="img-responsive center-block">
+        </div>
+        <div class="item">
+          <img src="assets/images/1.png" class="img-responsive center-block">
+        </div>
+        <div class="item">
+          <img src="assets/images/2.png" class="img-responsive center-block">
+        </div>
+        <div class="item">
+          <img src="assets/images/3.png" class="img-responsive center-block">
+        </div>
+      </div>
+    </div>
+
+    <div class="clear40"></div>
+    <div class="container">
+      <h2>Owl Carousel - Multiple Owl Carousels</h2>
+      <p>Use above owl carousel for logos etc. The logoes size should be same - atleast height. Otherwise we use a responsive container for logoes to restrict max height as we have done above.</p>
+      <h2>The Problem / Solution</h2>
+      <p>Problem with owl carousel is right left arrows and the dots. If you move dots up or down the position of arrows changes. And there is arrows wrapper div that has obstinate z-index that comes over the overlay text. The solution is to use custom next back arrows that we have used in below examples.</p>
+    </div>
+    
+    <div class="clear40"></div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+
+          <div class="sliderWrap">
+            <div id="owl-two" class="owl-carousel owl-theme owl-side">
+              <div class="item">
+                <img src="assets/images/slider-1.jpg" class="img-responsive center-block">
+              </div>
+              <div class="item">
+                <img src="assets/images/slider-2.jpg" class="img-responsive center-block">
+              </div>
+              <div class="item">
+                <a href="#">
+                  <img src="assets/images/slider-3.jpg" class="img-responsive center-block">
+                </a>
+              </div>
+              <div class="item">
+                <img src="assets/images/1.png" class="img-responsive center-block">
+              </div>
+              <div class="item">
+                <a href="#">
+                  <img src="assets/images/2.png" class="img-responsive center-block">
+                </a>
+              </div>
+              <div class="item">
+                <img src="assets/images/3.png" class="img-responsive center-block">
+              </div>
+              <div class="item">
+                <img src="assets/images/1.png" class="img-responsive center-block">
+              </div>
+              <div class="item">
+                <img src="assets/images/2.png" class="img-responsive center-block">
+              </div>
+              <div class="item">
+                <img src="assets/images/3.png" class="img-responsive center-block">
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="col-md-6">
+          
+          <div class="sliderWrap">
+            <div id="owl-three" class="owl-carousel owl-theme owl-side">
+              <div class="item">
+                <img src="assets/images/slider-1.jpg" class="img-responsive center-block">
+              </div>
+              <div class="item">
+                <img src="assets/images/slider-2.jpg" class="img-responsive center-block">
+              </div>
+              <div class="item">
+                <a href="#">
+                  <img src="assets/images/slider-3.jpg" class="img-responsive center-block">
+                </a>
+              </div>
+              <div class="item">
+                <img src="assets/images/1.png" class="img-responsive center-block">
+              </div>
+              <div class="item">
+                <a href="#">
+                  <img src="assets/images/2.png" class="img-responsive center-block">
+                </a>
+              </div>
+              <div class="item">
+                <img src="assets/images/3.png" class="img-responsive center-block">
+              </div>
+              <div class="item">
+                <img src="assets/images/1.png" class="img-responsive center-block">
+              </div>
+              <div class="item">
+                <img src="assets/images/2.png" class="img-responsive center-block">
+              </div>
+              <div class="item">
+                <img src="assets/images/3.png" class="img-responsive center-block">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="clear40"></div>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted text-center">Copyrights &copy;<span id="yearJS"></span> <a href="#">SiteName</a>. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    </div><!--.pg-wrapper ends-->
+
+    <script src="assets/scripts/jquery.min.js"></script>
+    <script src="assets/scripts/bootstrap.min.js"></script>
+    <script src="assets/scripts/wow.min.js"></script>
+    <script src="assets/scripts/jquery.easing.js"></script>
+    <script src="assets/scripts/jquery.flexslider-min.js"></script>
+    <script src="assets/scripts/owl.carousel.min.js"></script>
+    <script src="assets/scripts/custom.js"></script>
+
+    
+    <script>
+    $('.owl-carousel').hide();
+    $(document).ready(function(){
+      $('.owl-carousel').fadeIn();
+      $('#owl-logos').owlCarousel({
+          items: 3,
+          loop:true,
+          margin:10,
+          nav:true,
+          mouseDrag:true,
+          touchDrag:true,
+          pullDrag:true,
+          dots:true,
+          autoplay:false,
+          autoplayHoverPause:true,
+          //navText: ["<img src='myprevimage.png'>","<img src='mynextimage.png'>"],
+
+          // effects //
+
+          // for fade instead of slide, enable below line
+          // animateOut: 'fadeOut',
+
+          // flip animation // 2 lines below
+          // animateOut: 'slideOutDown',
+          // animateIn: 'flipInX',
+
+          responsive:{
+              0:{
+                  items:1,
+                  dots:true
+              },
+              600:{
+                  items:3,
+                  dots:true
+              },
+              1000:{
+                  items:6,
+                  dots:true
+              }
+          }
+      });
+
+      // enable arrows keys navigation
+      $(document.documentElement).keyup(function (event) {
+        if(event.keyCode == 37) {
+           $("#owl-logos .owl-prev").trigger( "click" );
+        } else if (event.keyCode == 39) {
+           $("#owl-logos .owl-next").trigger( "click" );
+        }
+      });
+
+      // owl slider 2
+
+      $('#owl-two').owlCarousel({
+          items: 1,
+          loop:true,
+          margin:0,
+          nav:true,
+          mouseDrag:true,
+          touchDrag:true,
+          pullDrag:true,
+          dots:true,
+          autoplay:false,
+          autoplayHoverPause:true,
+          //navText: ["<img src='myprevimage.png'>","<img src='mynextimage.png'>"],
+
+          // effects //
+
+          // for fade instead of slide, enable below line
+          // animateOut: 'fadeOut',
+
+          animateOut: 'fadeOut',
+          animateIn: 'fadeIn',
+
+          // flip animation // 2 lines below
+          // animateOut: 'slideOutDown',
+          // animateIn: 'flipInX',
+
+          responsive:{
+              0:{
+                  items:1,
+                  dots:true
+              },
+              600:{
+                  items:1,
+                  dots:true
+              },
+              1000:{
+                  items:1,
+                  dots:true
+              }
+          }
+      });
+
+     // custom arrows
+     var owl = $("#owl-two");
+     // Custom Navigation Events
+      $(".owlnext-2").click(function(){
+        owl.trigger('owl.next');
+      });
+      $(".owlprev-2").click(function(){
+        owl.trigger('owl.prev');
+      });
+
+      // owl slider 3
+
+      $('#owl-three').owlCarousel({
+          items: 1,
+          loop:true,
+          margin:0,
+          nav:true,
+          mouseDrag:true,
+          touchDrag:true,
+          pullDrag:true,
+          dots:true,
+          autoplay:false,
+          autoplayHoverPause:true,
+          //navText: ["<img src='myprevimage.png'>","<img src='mynextimage.png'>"],
+
+          // effects //
+
+          // for fade instead of slide, enable below line
+          // animateOut: 'fadeOut',
+
+          // flip animation // 2 lines below
+          animateOut: 'slideOutDown',
+          animateIn: 'flipInX',
+
+          responsive:{
+              0:{
+                  items:1,
+                  dots:true
+              },
+              600:{
+                  items:1,
+                  dots:true
+              },
+              1000:{
+                  items:1,
+                  dots:true
+              }
+          }
+      });
+
+     // custom arrows
+     var owl = $("#owl-three");
+     // Custom Navigation Events
+      $(".owlnext-3").click(function(){
+        owl.trigger('owl.next');
+      });
+      $(".owlprev-3").click(function(){
+        owl.trigger('owl.prev');
+      });      
+
+    });
+      
+    </script>
+
+  </body>
+</html>

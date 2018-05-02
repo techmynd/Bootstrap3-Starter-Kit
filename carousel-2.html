@@ -36,7 +36,7 @@
     .navbar-fixed-top-custom sticks header to top and adds padding from top for content
     .pg-wrapper is like second body coz we can not apply classes to body - but we can have div with .pg-wrapper in every partial pages that will be called in main index template
     -->
-    <div class="pg-wrapper sticky-footer navbar-fixed-top-custom">
+    <div class="pg-wrapper sticky-footer navbar-fixed-top-custom transparent-nav">
 
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default">
@@ -99,8 +99,8 @@
     </nav>
 
     <div class="sliderWrap">
-      <div id="owl-one" class="owl-carousel owl-theme">
-        <div class="item">
+      <div id="owl-one" class="owl-carousel owl-theme owl-full-screen">
+        <div class="item" style="background-image: url('assets/images/slider-1.jpg');">
           <div class="overlay"></div>
           <div class="txtBox">
             <div class="container">
@@ -109,37 +109,34 @@
               <a href="#" class="btn btn-success">LEARN MORE <i class="fa fa-angle-double-right fa-fw"></i></a>
             </div>
           </div>
-          <img src="assets/images/slider-1.jpg" class="img-responsive center-block">
         </div>
-        <div class="item">
+        <div class="item" style="background-image: url('assets/images/slider-2.jpg');">
           <div class="overlay"></div>
           <div class="txtBox">
             <div class="container">
               <h2>Lorem ipsum dolor sit amet</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, possimus.</p>
-              <a href="#" class="btn btn-success">LEARN MORE</a>
+              <a href="#" class="btn btn-success">LEARN MORE <i class="fa fa-angle-double-right fa-fw"></i></a>
             </div>
           </div>
-          <img src="assets/images/slider-2.jpg" class="img-responsive center-block">
         </div>
-        <div class="item">
+        <div class="item" style="background-image: url('assets/images/slider-3.jpg');">
           <div class="overlay"></div>
           <div class="txtBox">
             <div class="container">
               <h2>Lorem ipsum dolor sit amet</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, possimus.</p>
-              <a href="#" class="btn btn-success">LEARN MORE</a>
+              <a href="#" class="btn btn-success">LEARN MORE <i class="fa fa-angle-double-right fa-fw"></i></a>
             </div>
           </div>
-          <img src="assets/images/slider-3.jpg" class="img-responsive center-block">
         </div>
       </div>
     </div>
 
     <div class="clear40"></div>
     <div class="container">
-      <h2>Owl Carousel - Images Scroll or FadeInOut</h2>
-      <p>Use above owl carousel for sliding images and text over those images. This example uses images. All images height should be same. The images height becomes the slider height. Settings are in script and its got everything.</p>
+      <h2>Owl Carousel - Background Images Slider</h2>
+      <p>Use above owl carousel for sliding divs with backgrounds and text over those images. This example uses images. Images height can be any height. Slider height is screen height.</p>
     </div>
     <div class="clear40"></div>
 

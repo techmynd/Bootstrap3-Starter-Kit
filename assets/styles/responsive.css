@@ -2,24 +2,38 @@
 /*Minimal Media Queries*/
 /*######################*/
 
-@media all and (max-width:480px) {
-	.owl-dots {margin-top: 10px;}
-	.owl-nav {
-		/*bcoz in mobile view dots add extra height - more than image height so we use 40% instead of 50% top*/
-		top: 40%; 
-	}
-}
-
-@media all and (max-width:767px) {
-
+@media all and (max-width:1199px) {
+	.owl-carousel .item .txtBox {left: 60px; right: 60px;}
+	.txtBox .container {width: 100% !important;}
 }
 
 @media all and (max-width:991px) {
-
+	.owl-carousel .item .txtBox {left: 40px; right: 40px; text-align: center;}
+	.owl-carousel .item .txtBox .container {text-align: center;}
+	.owl-carousel .item .txtBox h2, .owl-carousel .item .txtBox p {text-align: center;}
 }
 
-@media all and (max-width:1199px) {
-	
+@media all and (max-width:767px) {
+	/*
+	bcoz in mobile view dots add extra height - 
+	more than image height so 
+	we use 30% instead of 50% top or use 50% minus arrows height
+	*/
+	.owl-nav {
+		top: calc(50% - 30px);
+		top: -moz-calc(50% - 30px);
+		top: -webkit-calc(50% - 30px);
+		top: -o-calc(50% - 30px);
+	}
+}
+
+@media all and (max-width:480px) {
+	.owl-dots {margin-top: 10px;}
+	.owl-carousel .item .txtBox {left: 40px; right: 40px;}
+	.owl-carousel .item .txtBox .container {padding:0;}
+	.owl-carousel .item .txtBox h2 {font-size: 14px; line-height: 22px; margin: 0; padding: 0;}
+	.owl-carousel .item .txtBox p {font-size: 13px; line-height: 16px;}
+	.owl-carousel .item .txtBox a {font-size: 13px !important;}
 }
 
 /*#######################*/
