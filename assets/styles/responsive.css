@@ -11,9 +11,12 @@
 	.owl-carousel .item .txtBox {left: 40px; right: 40px; text-align: center;}
 	.owl-carousel .item .txtBox .container {text-align: center;}
 	.owl-carousel .item .txtBox h2, .owl-carousel .item .txtBox p {text-align: center;}
+
+	.flex-direction-nav a {margin: -27px 0 0;}
 }
 
 @media all and (max-width:767px) {
+	body {-webkit-overflow-scrolling: touch;} /* Lets it scroll lazy on iDevice */
 	/*
 	bcoz in mobile view dots add extra height - 
 	more than image height so 
@@ -25,6 +28,7 @@
 		top: -webkit-calc(50% - 30px);
 		top: -o-calc(50% - 30px);
 	}
+
 }
 
 @media all and (max-width:480px) {

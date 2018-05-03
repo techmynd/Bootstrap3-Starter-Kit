@@ -15,11 +15,12 @@ h1, h2, h3, h4, h5, h6, button, .btn {font-family: 'Montserrat', sans-serif;}
 .no-padding-margin {padding:0; margin:0;}
 .no-padding {padding:0;}
 .no-margin {margin:0;}
-
 .relative {position: relative;}
 .absolute {position: relative;}
 .fixed {position: fixed;}
 .overflow-hidden {overflow: hidden;}
+.overflow-visible {overflow: visible !important;}
+.inline-block {display: inline-block;}
 
 textarea {/*resize:vertical;*/ resize: none;}
 button:focus, .btn:focus, a:focus, input:focus, .form-control:focus {outline: 0;}
@@ -74,10 +75,10 @@ body .sticky-footer {
 /*for transparent nav slider will be of full height of page*/
 .transparent-nav .sliderWrap {overflow: visible;}
 
-
 .navbar-default {box-shadow: none; border: none; border-radius: 0; background-image: none; background-color: #eee;}
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.open>a {background-image: none; box-shadow: none; text-shadow:none; color: #000;}
 .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {background-image: none;}
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {background-image: none; background-color: #e8e8e8; color: #000;}
 
 /*Owl Carousel General Settings*/
 
@@ -113,18 +114,40 @@ body .sticky-footer {
 .owl-carousel .item .overlay {position: absolute; left: 0; top: 0; right: 0; bottom: 0; z-index: 2; background-color: rgba(0,0,0,0.5);}
 
 .owl-full-screen {height:100vh;}
-.owl-full-screen .item {background-size: cover; background-position:50% 50%; height:100vh;}
+.owl-full-screen .item {background-size: cover; background-position:50% 50%; height:100vh; background-repeat: no-repeat;}
 
 .owl-logos .owl-dots {margin-top: 0px;}
 .owl-logos .item {height:160px; line-height: 150px; display: flex; align-items: center; overflow:hidden; vertical-align:middle; text-align:center;}
 .owl-logos .item a {margin:auto !important; vertical-align:middle; display:inline-block; width: 100%;}
 .owl-logos .item img {max-height:160px; margin: 0 auto !important; display: inline-block !important; width: auto !important;}
 
+/*owl slider images fixed height - owl logos slider*/
 .owl-side .owl-dots {margin-top: 0px;}
 .owl-side .item {height:260px; line-height: 250px; display: flex; align-items: center; overflow:hidden; vertical-align:middle; text-align:center;}
 .owl-side .item a {margin:auto !important; vertical-align:middle; display:inline-block; width: 100%;}
 .owl-side .item img {max-height:260px; margin: 0 auto !important; display: inline-block !important; width: auto !important;}
 
+/*flexslider settings*/
+.flex-direction-nav a {height: 45px;}
+.flexslider {border: 0; margin-bottom: 0;}
+.flex-control-nav {bottom: 0px;}
+/*flexslider Permanent arrows*/
+.show-arrows .flex-direction-nav .flex-prev {opacity: 1; left: 5px;}
+.show-arrows .flex-direction-nav .flex-next {opacity: 1; right: 5px;}
+/*flexslider full screen*/
+.fs-full-screen {height:100vh;}
+.fs-full-screen .slides li {background-size: cover; background-position:50% 50%; height:100vh; background-repeat: no-repeat;}
+/*Flexslider carousel - logos*/
+.flexslider.carousel .flex-control-nav {bottom: -40px;}
+/*Flexslider carousel responsive images boxes*/
+.flexslider.carousel .slides li {height:150px; line-height: 140px; display: flex !important; align-items: center; overflow:hidden; vertical-align:middle; text-align:center;}
+.flexslider.carousel .slides li a {margin:auto !important; vertical-align:middle; display:inline-block; width: 100%;}
+.flexslider.carousel .slides li img {max-height:150px; margin: 0 auto !important; display: inline-block !important; width: auto !important;}
+
+
+
+
+/*responsive image boxes for grid*/
 .grid-img-box {height:160px; line-height: 150px; display: flex; align-items: center; overflow:hidden; vertical-align:middle; text-align:center;}
 .grid-img-box a {margin:auto !important; vertical-align:middle; display:inline-block; width: 100%;}
 .grid-img-box img {max-height:160px; margin: 0 auto !important; display: inline-block !important; width: auto !important;}
