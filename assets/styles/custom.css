@@ -133,19 +133,71 @@ body .sticky-footer {
 .flex-control-nav {bottom: 0px;}
 /*flexslider Permanent arrows*/
 .show-arrows .flex-direction-nav .flex-prev {opacity: 1; left: 5px;}
-.show-arrows .flex-direction-nav .flex-next {opacity: 1; right: 5px;}
+.show-arrows .flex-direction-nav .flex-next {opacity: 1; right: 12px;}
+/*.flexslider:hover .flex-direction-nav .flex-next {right: 17px;}*/
+
+.flexslider .flex-direction-nav .flex-prev {opacity: 0.5 !important;}
+.flexslider .flex-direction-nav .flex-prev:hover {opacity: 1 !important;}
+.flexslider .flex-direction-nav .flex-next {opacity: 0.5 !important;}
+.flexslider .flex-direction-nav .flex-next:hover {opacity: 1 !important;}
+
+.flexslider .flex-direction-nav .flex-prev, 
+.flexslider:hover .flex-direction-nav .flex-prev {left: 0px !important;}
+
+.flexslider .flex-direction-nav .flex-next,
+.flexslider:hover .flex-direction-nav .flex-next {right: 0px !important;}
+
 /*flexslider full screen*/
 .fs-full-screen {height:100vh;}
 .fs-full-screen .slides li {background-size: cover; background-position:50% 50%; height:100vh; background-repeat: no-repeat;}
 /*Flexslider carousel - logos*/
 .flexslider.carousel .flex-control-nav {bottom: -40px;}
 /*Flexslider carousel responsive images boxes*/
-.flexslider.carousel .slides li {height:150px; line-height: 140px; display: flex !important; align-items: center; overflow:hidden; vertical-align:middle; text-align:center;}
-.flexslider.carousel .slides li a {margin:auto !important; vertical-align:middle; display:inline-block; width: 100%;}
-.flexslider.carousel .slides li img {max-height:150px; margin: 0 auto !important; display: inline-block !important; width: auto !important;}
+#flex-logos.flexslider .slides li {height:150px; line-height: 140px; display: flex !important; align-items: center; overflow:hidden; vertical-align:middle; text-align:center;}
+#flex-logos.flexslider .slides li a {margin:auto !important; vertical-align:middle; display:inline-block;}
+#flex-logos.flexslider .slides li img {max-height:150px; margin: 0 auto !important; display: inline-block !important; width: auto !important; max-width: 100% !important;}
 
+.slider-img-wrap {height:300px; line-height: 290px; display: flex !important; align-items: center; overflow:hidden; vertical-align:middle; text-align:center;}
+.slider-img-wrap a {margin:auto !important; vertical-align:middle; display:inline-block;}
+.slider-img-wrap img {max-height:300px !important; margin: 0 auto !important; display: inline-block !important; width: auto !important; max-width: 100% !important;}
+.flexslider.gallery .flex-control-nav {bottom: -40px;}
 
+/*flex slider thumbs for carousel - small thumbs*/
+.slider-img-wrap-small {height:80px; line-height: 70px; display: flex !important; align-items: center; overflow:hidden; vertical-align:middle; text-align:center; background-color: #f4f4f4; border:1px solid #eee;}
+.slider-img-wrap-small a {margin:0 auto !important; vertical-align:middle; display:inline-block;}
+.slider-img-wrap-small img {max-height:80px !important; margin: 0 auto !important; display: inline-block !important; width: auto !important; max-width: 100% !important;}
+#slider-carousel-thumbs .flex-direction-nav a {top: 56% !important;}
+#slider-carousel-thumbs .slides li {cursor: pointer;}
 
+#synced-slider {border: 1px solid #eee; padding: 2px; background-color: #f4f4f4; border-radius: 2px;}
+
+/*enable arrows where slider last image reaches - use this class with .flexslider to enable in synced slider with thumbs*/
+.prev-next-enabled .flex-direction-nav .flex-disabled {cursor: default; z-index: 10;}
+
+/*enable left and right side space for slider arrows*/
+.flexslider.left-right-space {padding: 0 40px;}
+
+.flex-direction-nav a.flex-next:before {margin-left: 2px;}
+
+.no-directional-arrows .flex-direction-nav {display: none;}
+
+.flex-arrows-space .flex-direction-nav .flex-prev, 
+.flex-arrows-space.flexslider:hover .flex-direction-nav .flex-prev
+{left: 10px !important;}
+.flex-arrows-space .flex-direction-nav .flex-next,
+.flex-arrows-space.flexslider:hover .flex-direction-nav .flex-next
+{right: 10px !important;}
+
+/*flexslider with static thumbs instead of carousel thumbs*/
+.flex-no-nav .flex-control-thumbs li {height:80px; line-height: 80px; display: inline-block !important; align-items: center; overflow:hidden; vertical-align:middle; text-align:center; background-color: #f4f4f4; border:1px solid #eee; margin: 2px; width: 24%; float: none;}
+.flex-no-nav .flex-control-thumbs li img {max-height:80px !important; margin: 0 auto !important; display: inline-block !important; width: auto !important; max-width: 100% !important;}
+
+/*Change flexslider icons*/
+.flex-direction-nav a {width: 30px; height: 30px; background-color: #000; border-radius: 50%; text-align: center;}
+.flex-direction-nav a:before {font-size: 16px; color: #fff; line-height: 30px;}
+.flex-direction-nav .flex-next {right: -50px; text-align: center;}
+.flex-direction-nav .flex-next:before {font-family: "FontAwesome" !important; content: "\f105" !important; margin-left: 2px;}
+.flex-direction-nav .flex-prev:before {font-family: "FontAwesome" !important; content: "\f104" !important; margin-right: 2px;}
 
 /*responsive image boxes for grid*/
 .grid-img-box {height:160px; line-height: 150px; display: flex; align-items: center; overflow:hidden; vertical-align:middle; text-align:center;}

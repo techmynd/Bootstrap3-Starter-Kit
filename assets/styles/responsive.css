@@ -13,6 +13,7 @@
 	.owl-carousel .item .txtBox h2, .owl-carousel .item .txtBox p {text-align: center;}
 
 	.flex-direction-nav a {margin: -27px 0 0;}
+	.flexslider.gallery {margin-bottom: 50px;}
 }
 
 @media all and (max-width:767px) {
