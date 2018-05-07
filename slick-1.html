@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 
-    <title>Carousel</title>
+    <title>Flex Slider</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -18,6 +18,9 @@
     <link href="assets/styles/owl.carousel.min.css" rel="stylesheet">
     <link href="assets/styles/owl.theme.default.min.css" rel="stylesheet">
     <link href="assets/styles/font-awesome.min.css" rel="stylesheet">
+
+    <link href="assets/styles/slick.css" rel="stylesheet">
+    <link href="assets/styles/slick-theme.css" rel="stylesheet">
 
     <link href="assets/styles/hover-min.css" rel="stylesheet">
     <link href="assets/styles/animate.css" rel="stylesheet">
@@ -53,10 +56,10 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a href="index.html">Home</a></li>
-            <li class="dropdown active">
+            <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Owl Carousel <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li class="active"><a href="carousel.html">Single / Random Height / images</a></li>
+                <li><a href="carousel.html">Single / Random Height / images</a></li>
                 <li><a href="carousel-2.html">Single / Screen Height / BGs</a></li>
                 <li><a href="carousel-3.html">Multiple Sliders / images</a></li>
               </ul>
@@ -69,10 +72,10 @@
                 <li><a href="flexslider-3.html">Multiple Sliders / images</a></li>
               </ul>
             </li>
-            <li class="dropdown">
+            <li class="dropdown active">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Slick Slider <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="slick-1.html">Single / Random Height / images</a></li>
+                <li class="active"><a href="slick-1.html">Single / Random Height / images</a></li>
                 <li><a href="slick-2.html">Single / Screen Height / BGs</a></li>
                 <li><a href="slick-3.html">Multiple Sliders / images</a></li>
               </ul>
@@ -123,47 +126,32 @@
     </nav>
 
     <div class="sliderWrap">
-      <div id="owl-one" class="owl-carousel owl-theme">
-        <div class="item">
-          <div class="overlay"></div>
-          <div class="txtBox">
-            <div class="container">
-              <h2>Lorem ipsum dolor sit amet</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, possimus.</p>
-              <a href="#" class="btn btn-success">LEARN MORE <i class="fa fa-angle-double-right fa-fw"></i></a>
+      <div class="slickslider">
+          <div class="slide">
+            <div class="txtBox">
+              <div class="container">
+                <h2>Lorem ipsum dolor sit amet</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, possimus.</p>
+                <a href="#" class="btn btn-success">LEARN MORE <i class="fa fa-angle-double-right fa-fw"></i></a>
+              </div>
             </div>
+            <img src="assets/images/slide-1.jpg" class="img-responsive center-block">
           </div>
-          <img src="assets/images/slide-1.jpg" class="img-responsive center-block">
-        </div>
-        <div class="item">
-          <div class="overlay"></div>
-          <div class="txtBox">
-            <div class="container">
-              <h2>Lorem ipsum dolor sit amet</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, possimus.</p>
-              <a href="#" class="btn btn-success">LEARN MORE</a>
-            </div>
+          <div class="slide">
+            <img src="assets/images/slide-2.jpg" class="img-responsive center-block">
           </div>
-          <img src="assets/images/slide-2.jpg" class="img-responsive center-block">
-        </div>
-        <div class="item">
-          <div class="overlay"></div>
-          <div class="txtBox">
-            <div class="container">
-              <h2>Lorem ipsum dolor sit amet</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, possimus.</p>
-              <a href="#" class="btn btn-success">LEARN MORE</a>
-            </div>
+          <div class="slide">
+            <img src="assets/images/slide-3.jpg" class="img-responsive center-block">
           </div>
-          <img src="assets/images/slide-3.jpg" class="img-responsive center-block">
-        </div>
+        
       </div>
     </div>
 
     <div class="clear40"></div>
     <div class="container">
-      <h2>Owl Carousel - Images Scroll or FadeInOut</h2>
-      <p>Use above owl carousel for sliding images and text over those images. This example uses images. All images height should be same. The images height becomes the slider height. Settings are in script and its got everything.</p>
+      <h2>Slick Slider - Images Slide</h2>
+      <p>Use above slick slider for sliding images. This example uses images. All images height should be same. This slider is not responsive for image but it supports custom text overlays. Not responsive.</p>
+      <p>Full responsive galery example. <a href="https://codepen.io/sendstufftodanny/pen/PZXRdP" target="_blank">https://codepen.io/sendstufftodanny/pen/PZXRdP</a></p>
     </div>
     <div class="clear40"></div>
 
@@ -176,60 +164,40 @@
     </div><!--.pg-wrapper ends-->
 
     <script src="assets/scripts/jquery.min.js"></script>
+    <script src="assets/scripts/jquery.easing.js"></script>
     <script src="assets/scripts/bootstrap.min.js"></script>
     <script src="assets/scripts/wow.min.js"></script>
-    <script src="assets/scripts/jquery.easing.js"></script>
     <script src="assets/scripts/jquery.flexslider-min.js"></script>
     <script src="assets/scripts/owl.carousel.min.js"></script>
+    <script src="assets/scripts/slick.min.js"></script>
     <script src="assets/scripts/custom.js"></script>
 
-    
     <script>
-    $('.owl-carousel').hide();
+    $('.slickslider').hide();
     $(document).ready(function(){
-      $('.owl-carousel').fadeIn();
-      $('#owl-one').owlCarousel({
-          items: 1,
-          loop:true,
-          margin:0,
-          nav:true,
-          mouseDrag:true,
-          touchDrag:true,
-          pullDrag:true,
-          dots:true,
-          autoplay:false,
-          autoplayHoverPause:true,
-          //navText: ["<img src='myprevimage.png'>","<img src='mynextimage.png'>"],
-
-          // effects //
-
-          // for fade instead of slide, enable below line
-          // animateOut: 'fadeOut',
-
-          // flip animation // 2 lines below
-          // animateOut: 'slideOutDown',
-          // animateIn: 'flipInX',
-
-          responsive:{
-              0:{
-                  items:1
-              },
-              600:{
-                  items:1
-              },
-              1000:{
-                  items:1
-              }
-          }
-      });
+      $('.slickslider').fadeIn('slow');
       
-      // enable arrows keys navigation
-      $(document.documentElement).keyup(function (event) {
-        if(event.keyCode == 37) {
-           $("#owl-one .owl-prev").trigger( "click" );
-        } else if (event.keyCode == 39) {
-           $("#owl-one .owl-next").trigger( "click" );
-        }
+      $('.slickslider').slick({
+        dots: true,
+        //vertical: true,
+        // center mode shows zoomed centered version ignoring left right sides of images 
+        //centerMode: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        arrows: true,
+        autoplay: false,
+        cssEase: 'ease',
+        draggable: true,
+        fade: false,
+        swipe: true,
+        touchMove: true
+        // adaptiveHeight: true,
+        // mobileFirst: true,
+        // autoplaySpeed: 3000,
+        // prevArrow: '<i class="fa fa-angle-left"></i>', 
+        // nextArrow: '<i class="fa fa-angle-right"></i>',
+        //variableWidth: true
       });
 
     });

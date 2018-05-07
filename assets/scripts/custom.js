@@ -57,3 +57,8 @@ function showCurrentYear() {
 }
 document.getElementById("yearJS").innerHTML = showCurrentYear();
 
+/*if window is resized - check*/
+$(window).resize(function(){
+  // code here
+});
+

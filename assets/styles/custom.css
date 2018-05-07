@@ -199,6 +199,25 @@ body .sticky-footer {
 .flex-direction-nav .flex-next:before {font-family: "FontAwesome" !important; content: "\f105" !important; margin-left: 2px;}
 .flex-direction-nav .flex-prev:before {font-family: "FontAwesome" !important; content: "\f104" !important; margin-right: 2px;}
 
+/*slick slider settings*/
+.slick-next {right: 10px; z-index: 10;}
+.slick-prev {left: 10px; z-index: 10;}
+.slick-prev:before, .slick-next:before {color: #000;}
+
+.slickslider .slide, .bx-slider .slide {position: relative;}
+.slickslider .slide .txtBox, .bx-slider .slide .txtBox {position:absolute; top:50%; left:0; right: 0; z-index:998; transition: all 300ms ease;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); 
+  -ms-transform: translateY(-50%); -o-transform: translateY(-50%);
+  }
+.slickslider .slide {width: 100%; height: 100%;}
+
+.slick-fullscreen .slick-slide, .slick-fullscreen .slick-slide div {height: 100vh;}
+.slick-fullscreen .slide {height:100vh; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover;}
+
+.slick-logos .slide {height:80px; line-height: 70px; display: flex !important; align-items: center; overflow:hidden; vertical-align:middle; text-align:center; background-color: #f4f4f4; border:1px solid #eee;}
+.slick-logos .slide img {max-height:80px !important; margin: 0 auto !important; display: inline-block !important; width: auto !important; max-width: 100% !important;}
+
 /*responsive image boxes for grid*/
 .grid-img-box {height:160px; line-height: 150px; display: flex; align-items: center; overflow:hidden; vertical-align:middle; text-align:center;}
 .grid-img-box a {margin:auto !important; vertical-align:middle; display:inline-block; width: 100%;}
