@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 
-    <title>Flex Slider</title>
+    <title>Bx Slider 2</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -18,6 +18,11 @@
     <link href="assets/styles/owl.carousel.min.css" rel="stylesheet">
     <link href="assets/styles/owl.theme.default.min.css" rel="stylesheet">
     <link href="assets/styles/font-awesome.min.css" rel="stylesheet">
+
+    <link href="assets/styles/slick.css" rel="stylesheet">
+    <link href="assets/styles/slick-theme.css" rel="stylesheet">
+
+    <link href="assets/styles/jquery.bxslider.min.css" rel="stylesheet">
 
     <link href="assets/styles/hover-min.css" rel="stylesheet">
     <link href="assets/styles/animate.css" rel="stylesheet">
@@ -61,10 +66,10 @@
                 <li><a href="carousel-3.html">Multiple Sliders / images</a></li>
               </ul>
             </li>
-            <li class="dropdown active">
+            <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Flex Slider <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li class="active"><a href="flexslider-1.html">Single / Random Height / images</a></li>
+                <li><a href="flexslider-1.html">Single / Random Height / images</a></li>
                 <li><a href="flexslider-2.html">Single / Screen Height / BGs</a></li>
                 <li><a href="flexslider-3.html">Multiple Sliders / images</a></li>
               </ul>
@@ -77,11 +82,11 @@
                 <li><a href="slick-3.html">Multiple Sliders / images</a></li>
               </ul>
             </li>
-            <li class="dropdown">
+            <li class="dropdown active">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">BX Slider <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="bx-1.html">Single / Random Height / images</a></li>
-                <li><a href="bx-2.html">Single / Screen Height / BGs</a></li>
+                <li class="active"><a href="bx-2.html">Single / Screen Height / BGs</a></li>
                 <li><a href="bx-3.html">Vertical Slider / images</a></li>
                 <li><a href="bx-4.html">Multiple Sliders / images</a></li>
               </ul>
@@ -117,27 +122,28 @@
     </nav>
 
     <div class="sliderWrap">
-      <div class="flexslider flex-arrows-space">
-        <ul class="slides">
-          <li>
-            <img src="assets/images/slide-1.jpg">
-          </li>
-          <li>
-            <img src="assets/images/slide-2.jpg">
-          </li>
-          <li>
-            <img src="assets/images/slide-3.jpg">
-          </li>
-        </ul>
+      <div class="bx-slider bx-fullscreen">
+          <div class="slide" style="background-image: url('assets/images/slide-1.jpg');">
+            <div class="txtBox">
+              <div class="container">
+                <h2>Lorem ipsum dolor sit amet</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, possimus.</p>
+                <a href="#" class="btn btn-success">LEARN MORE <i class="fa fa-angle-double-right fa-fw"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="slide" style="background-image: url('assets/images/slide-2.jpg');"></div>
+          <div class="slide" style="background-image: url('assets/images/slide-3.jpg');"></div>
       </div>
     </div>
 
     <div class="clear40"></div>
+    
     <div class="container">
-      <h2>Flex Slider - Images Slide or Fade</h2>
-      <p>Use above flexslider for sliding images. This example uses images. All images height should be same. The images height becomes the slider height. Flex slider is not good with text in slides unless its just one text over all slides.</p>
-      <p>Use class <strong>show-arrows</strong> with <strong>flexslider</strong> main div, to show permanent arrows.</p>
+      <h2>BX Slider - Background Images Full Screen</h2>
+      <p>BX Slider full screen works. This example uses background images. This slider is responsive for images but you have to drop the height media queries because the images are using background cover. It supports custom text overlays.</p>
     </div>
+
     <div class="clear40"></div>
 
     <footer class="footer">
@@ -154,44 +160,58 @@
     <script src="assets/scripts/wow.min.js"></script>
     <script src="assets/scripts/jquery.flexslider-min.js"></script>
     <script src="assets/scripts/owl.carousel.min.js"></script>
+    <script src="assets/scripts/slick.min.js"></script>
+    <script src="assets/scripts/jquery.bxslider.min.js"></script>
+    <script src="assets/scripts/jquery.fitvids.js"></script>
     <script src="assets/scripts/custom.js"></script>
 
     <script>
-    $('.flexslider').hide();
+    $('.bx-slider').hide();
     $(document).ready(function(){
-      $('.flexslider').fadeIn('slow');
-    });
-      
-      $(window).load(function() {
-        $('.flexslider').flexslider({
-          animation: "slide",
-          // animation: "fade",
-          
-          // easing: "swing",
-          // direction: "vertical", // direction: "horizontal",
-          
-          smoothHeight: true,
-          animationSpeed: "600",
-          randomize: false,
-          pauseOnHover: true,
-          useCSS: true,
-          touch: true,
-          keyboard: true,
+      $('.bx-slider').fadeIn('slow');
 
-          // dots
-          controlNav: true,
-          // continuous scroll
-          animationLoop: true,
-          
-          // auto loop
-           slideshow: false
-          // slideshowSpeed: "7000",
-          // pausePlay: false,
+      $('.bx-slider').bxSlider({
+        mode: 'horizontal', // 'horizontal' or 'vertical'
+        speed: 500,
+        slideMargin: 0,
+        randomStart: false,
+        infiniteLoop: true,
+        hideControlOnEnd: false,
+        easing: 'ease-in-out', // 'linear', 'ease', 'ease-in', 'ease-out', 'swing'
+        ticker: false,
+        tickerHover: false,
+        adaptiveHeight: false,
+        video: true, // this makes videos responsive with jquery.fitvids.js
+        touchEnabled: true,
+        wrapperClass: 'bx-wrapper',
+        
+        pager: true,
+        pagerType: 'full',
+        pagerShortSeparator: ' / ',
+        
+        controls: true,
+        nextText: 'Next',
+        prevText: 'Prev',
+        
+        autoControls: true,
+        startText: 'Start',
+        stopText: 'Stop',
+        autoControlsCombine: false,
 
-        });
+        keyboardEnabled: true,
+        auto: true, // auto move
+        autoStart: true,
+        autoHover: true, // stop on hover
+
+        minSlides: 1, // minimum slides > 2,3,4 > no. of slides
+        maxSlides: 1, // max slides
+        moveSlides: 0, // 0 for default
+
+        responsive: true
+
       });
 
-    
+    });
       
     </script>
 

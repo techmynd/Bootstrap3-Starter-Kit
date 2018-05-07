@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 
-    <title>Bx Slider 1</title>
+    <title>Bx Slider 4</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -57,7 +57,6 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Owl Carousel <span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -85,10 +84,10 @@
             <li class="dropdown active">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">BX Slider <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li class="active"><a href="bx-1.html">Single / Random Height / images</a></li>
+                <li><a href="bx-1.html">Single / Random Height / images</a></li>
                 <li><a href="bx-2.html">Single / Screen Height / BGs</a></li>
                 <li><a href="bx-3.html">Vertical Slider / images</a></li>
-                <li><a href="bx-4.html">Multiple Sliders / images</a></li>
+                <li class="active"><a href="bx-4.html">Multiple Sliders / images</a></li>
               </ul>
             </li>
             
@@ -121,33 +120,111 @@
       </div>
     </nav>
 
+    <div class="clear40"></div>
+
     <div class="sliderWrap">
-      <div class="bx-slider">
+      <div class="bx-slider bx-logos">
           <div class="slide">
-            <div class="txtBox">
-              <div class="container">
-                <h2>Lorem ipsum dolor sit amet</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, possimus.</p>
-                <a href="#" class="btn btn-success">LEARN MORE <i class="fa fa-angle-double-right fa-fw"></i></a>
-              </div>
-            </div>
-            <img src="assets/images/slide-1.jpg" class="img-responsive center-block">
+            <img src="assets/images/slide-1.jpg">
           </div>
           <div class="slide">
-            <img src="assets/images/slide-2.jpg" class="img-responsive center-block">
+            <img src="assets/images/slide-2.jpg">
           </div>
           <div class="slide">
-            <img src="assets/images/slide-3.jpg" class="img-responsive center-block">
+            <img src="assets/images/slide-3.jpg">
           </div>
-        
+          <div class="slide">
+            <img src="assets/images/1.png">
+          </div>
+          <div class="slide">
+            <img src="assets/images/2.png">
+          </div>
+          <div class="slide">
+            <img src="assets/images/3.png">
+          </div>
+          <div class="slide">
+            <img src="assets/images/slide-1.jpg">
+          </div>
+          <div class="slide">
+            <img src="assets/images/slide-2.jpg">
+          </div>
+          <div class="slide">
+            <img src="assets/images/slide-3.jpg">
+          </div>
+          <div class="slide">
+            <img src="assets/images/1.png">
+          </div>
+          <div class="slide">
+            <img src="assets/images/2.png">
+          </div>
+          <div class="slide">
+            <img src="assets/images/3.png">
+          </div>
       </div>
     </div>
 
     <div class="clear40"></div>
     
     <div class="container">
-      <h2>BX Slider - Images Slide</h2>
+      <h2>BX Slider - Multiple Sliders</h2>
       <p>BX Slider works for regular slider. This example uses images. All images height should be same. This slider is  responsive for image and it supports custom text overlays. Slider can slide images horizontally, vertically or fade images as transition.</p>
+    </div>
+
+    <div class="clear40"></div>
+
+    <div class="row">
+      <div class="col-md-6">
+        
+        <div class="sliderWrap">
+          <div class="bx-slider bx-2">
+              <div class="slide slider-img-wrap">
+                <img src="assets/images/slide-1.jpg">
+              </div>
+              <div class="slide slider-img-wrap">
+                <img src="assets/images/slide-2.jpg">
+              </div>
+              <div class="slide slider-img-wrap">
+                <img src="assets/images/slide-3.jpg">
+              </div>
+              <div class="slide slider-img-wrap">
+                <img src="assets/images/1.png">
+              </div>
+              <div class="slide slider-img-wrap">
+                <img src="assets/images/2.png">
+              </div>
+              <div class="slide slider-img-wrap">
+                <img src="assets/images/3.png">
+              </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-6">
+
+        <div class="sliderWrap">
+          <div class="bx-slider bx-3">
+              <div class="slide slider-img-wrap">
+                <img src="assets/images/slide-1.jpg">
+              </div>
+              <div class="slide slider-img-wrap">
+                <img src="assets/images/slide-2.jpg">
+              </div>
+              <div class="slide slider-img-wrap">
+                <img src="assets/images/slide-3.jpg">
+              </div>
+              <div class="slide slider-img-wrap">
+                <img src="assets/images/1.png">
+              </div>
+              <div class="slide slider-img-wrap">
+                <img src="assets/images/2.png">
+              </div>
+              <div class="slide slider-img-wrap">
+                <img src="assets/images/3.png">
+              </div>
+          </div>
+        </div>
+
+      </div>
     </div>
 
     <div class="clear40"></div>
@@ -176,7 +253,7 @@
     $(document).ready(function(){
       $('.bx-slider').fadeIn('slow');
 
-      $('.bx-slider').bxSlider({
+      $('.bx-logos').bxSlider({
         mode: 'horizontal', // 'horizontal' or 'vertical' or 'fade'
         speed: 500,
         slideMargin: 0,
@@ -205,17 +282,109 @@
         autoControlsCombine: false,
 
         keyboardEnabled: true,
-        auto: true, // auto move
+        auto: false, // auto move
         autoStart: true,
         autoHover: true, // stop on hover
 
-        minSlides: 1, // minimum slides > 2,3,4 > no. of slides
-        maxSlides: 1, // max slides
-        moveSlides: 0, // 0 for default
+        minSlides: 2, // minimum slides > 2,3,4 > no. of slides
+        maxSlides: 8, // max slides
+        moveSlides: 1, // 0 for default
+        slideWidth: 200,
+        slideMargin: 2,
 
         responsive: true
 
       });
+
+
+      // bx-2
+
+
+      $('.bx-2').bxSlider({
+        mode: 'horizontal', // 'horizontal' or 'vertical' or 'fade'
+        speed: 500,
+        slideMargin: 0,
+        randomStart: false,
+        infiniteLoop: true,
+        hideControlOnEnd: false,
+        easing: 'ease-in-out', // 'linear', 'ease', 'ease-in', 'ease-out', 'swing'
+        ticker: false,
+        tickerHover: false,
+        adaptiveHeight: false,
+        video: true, // this makes videos responsive with jquery.fitvids.js
+        touchEnabled: true,
+        wrapperClass: 'bx-wrapper',
+        
+        pager: true,
+        pagerType: 'full',
+        pagerShortSeparator: ' / ',
+        
+        controls: true,
+        nextText: 'Next',
+        prevText: 'Prev',
+        
+        autoControls: true,
+        startText: 'Start',
+        stopText: 'Stop',
+        autoControlsCombine: false,
+
+        keyboardEnabled: true,
+        auto: false, // auto move
+        autoStart: false,
+        autoHover: true, // stop on hover
+
+        minSlides: 1, // minimum slides > 2,3,4 > no. of slides
+        maxSlides: 1, // max slides
+        moveSlides: 1, // 0 for default
+
+        responsive: true
+
+      });
+
+      
+      // bx-3 
+
+      $('.bx-3').bxSlider({
+        mode: 'vertical', // 'horizontal' or 'vertical' or 'fade'
+        speed: 500,
+        slideMargin: 0,
+        randomStart: false,
+        infiniteLoop: true,
+        hideControlOnEnd: false,
+        easing: 'ease-in-out', // 'linear', 'ease', 'ease-in', 'ease-out', 'swing'
+        ticker: false,
+        tickerHover: false,
+        adaptiveHeight: false,
+        video: true, // this makes videos responsive with jquery.fitvids.js
+        touchEnabled: true,
+        wrapperClass: 'bx-wrapper',
+        
+        pager: true,
+        pagerType: 'full',
+        pagerShortSeparator: ' / ',
+        
+        controls: true,
+        nextText: 'Next',
+        prevText: 'Prev',
+        
+        autoControls: true,
+        startText: 'Start',
+        stopText: 'Stop',
+        autoControlsCombine: false,
+
+        keyboardEnabled: true,
+        auto: false, // auto move
+        autoStart: false,
+        autoHover: true, // stop on hover
+
+        minSlides: 1, // minimum slides > 2,3,4 > no. of slides
+        maxSlides: 1, // max slides
+        moveSlides: 1, // 0 for default
+
+        responsive: true
+
+      });
+
 
     });
       

@@ -218,8 +218,17 @@ body .sticky-footer {
 .slick-logos .slide {height:80px; line-height: 70px; display: flex !important; align-items: center; overflow:hidden; vertical-align:middle; text-align:center; background-color: #f4f4f4; border:1px solid #eee;}
 .slick-logos .slide img {max-height:80px !important; margin: 0 auto !important; display: inline-block !important; width: auto !important; max-width: 100% !important;}
 
+/*bx slider*/
+.bx-wrapper {margin-bottom: 40px; box-shadow: none; border:0;}
+.bx-fullscreen .slide {height: 100vh; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover;}
+
+.bx-logos .slide {height:80px; line-height: 70px; display: inline-block !important; align-items: center; overflow:hidden; vertical-align:middle; text-align:center; background-color: #f4f4f4; border:1px solid #eee; margin: 2px; width: 24%; float: none;}
+.bx-logos .slide img {max-height:76px !important; margin: 0 auto !important; display: inline-block !important; width: auto !important; max-width: 100% !important;}
+
+
 /*responsive image boxes for grid*/
 .grid-img-box {height:160px; line-height: 150px; display: flex; align-items: center; overflow:hidden; vertical-align:middle; text-align:center;}
 .grid-img-box a {margin:auto !important; vertical-align:middle; display:inline-block; width: 100%;}
 .grid-img-box img {max-height:160px; margin: 0 auto !important; display: inline-block !important; width: auto !important;}
+
 

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 
-    <title>Flex Slider</title>
+    <title>Homepage</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -61,10 +61,10 @@
                 <li><a href="carousel-3.html">Multiple Sliders / images</a></li>
               </ul>
             </li>
-            <li class="dropdown active">
+            <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Flex Slider <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li class="active"><a href="flexslider-1.html">Single / Random Height / images</a></li>
+                <li><a href="flexslider-1.html">Single / Random Height / images</a></li>
                 <li><a href="flexslider-2.html">Single / Screen Height / BGs</a></li>
                 <li><a href="flexslider-3.html">Multiple Sliders / images</a></li>
               </ul>
@@ -86,10 +86,9 @@
                 <li><a href="bx-4.html">Multiple Sliders / images</a></li>
               </ul>
             </li>
-            
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
+            <li class="dropdown active">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Components <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="products-grid.html">Products Grid</a></li>
@@ -108,7 +107,7 @@
                 <li><a href="sliding-left-menu.html">Sliding Left Menu</a></li>
                 <li><a href="data-table.html">Data Table</a></li>
                 <li><a href="block-effects.html">Blockchain Threads Effect</a></li>
-                <li><a href="misc.html">Misc.</a></li>
+                <li class="active"><a href="misc.html">Misc.</a></li>
               </ul>
             </li>
           </ul>
@@ -116,29 +115,27 @@
       </div>
     </nav>
 
-    <div class="sliderWrap">
-      <div class="flexslider flex-arrows-space">
-        <ul class="slides">
-          <li>
-            <img src="assets/images/slide-1.jpg">
-          </li>
-          <li>
-            <img src="assets/images/slide-2.jpg">
-          </li>
-          <li>
-            <img src="assets/images/slide-3.jpg">
-          </li>
+    <div class="container">
+        
+        <h2>Extras</h2>
+        
+        <h4>More Sliders</h4>
+
+        <ul>
+          <li><a href="http://wowslider.com" target="_blank">WOW Slider (Software to create sliders)</a></li>
+          <li><a href="https://www.jssor.com" target="_blank">Jssor (Responsive slider - lots of theming options)</a></li>
+          <li><a href="https://www.jqueryscript.net/slider/nivo-slider.html" target="_blank">NIVO Slider</a></li>
+          <li><a href="http://responsiveslides.com" target="_blank">Responsive Slides</a></li>
         </ul>
-      </div>
+
+        <h4>POPUP Gallery</h4>
+
+        <ul>
+          <li><a href="http://www.jacklmoore.com/colorbox/" target="_blank">Colorbox by Jack moore</a></li>
+        </ul>
+
     </div>
 
-    <div class="clear40"></div>
-    <div class="container">
-      <h2>Flex Slider - Images Slide or Fade</h2>
-      <p>Use above flexslider for sliding images. This example uses images. All images height should be same. The images height becomes the slider height. Flex slider is not good with text in slides unless its just one text over all slides.</p>
-      <p>Use class <strong>show-arrows</strong> with <strong>flexslider</strong> main div, to show permanent arrows.</p>
-    </div>
-    <div class="clear40"></div>
 
     <footer class="footer">
       <div class="container">
@@ -149,51 +146,12 @@
     </div><!--.pg-wrapper ends-->
 
     <script src="assets/scripts/jquery.min.js"></script>
-    <script src="assets/scripts/jquery.easing.js"></script>
     <script src="assets/scripts/bootstrap.min.js"></script>
     <script src="assets/scripts/wow.min.js"></script>
+    <script src="assets/scripts/jquery.easing.js"></script>
     <script src="assets/scripts/jquery.flexslider-min.js"></script>
     <script src="assets/scripts/owl.carousel.min.js"></script>
     <script src="assets/scripts/custom.js"></script>
-
-    <script>
-    $('.flexslider').hide();
-    $(document).ready(function(){
-      $('.flexslider').fadeIn('slow');
-    });
-      
-      $(window).load(function() {
-        $('.flexslider').flexslider({
-          animation: "slide",
-          // animation: "fade",
-          
-          // easing: "swing",
-          // direction: "vertical", // direction: "horizontal",
-          
-          smoothHeight: true,
-          animationSpeed: "600",
-          randomize: false,
-          pauseOnHover: true,
-          useCSS: true,
-          touch: true,
-          keyboard: true,
-
-          // dots
-          controlNav: true,
-          // continuous scroll
-          animationLoop: true,
-          
-          // auto loop
-           slideshow: false
-          // slideshowSpeed: "7000",
-          // pausePlay: false,
-
-        });
-      });
-
-    
-      
-    </script>
 
   </body>
 </html>

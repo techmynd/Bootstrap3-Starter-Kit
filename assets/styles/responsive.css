@@ -5,6 +5,8 @@
 @media all and (max-width:1199px) {
 	.owl-carousel .item .txtBox {left: 60px; right: 60px;}
 	.txtBox .container {width: 100% !important;}
+
+	.bx-slider .slide .txtBox {left: 40px; right: 40px;}
 }
 
 @media all and (max-width:991px) {
