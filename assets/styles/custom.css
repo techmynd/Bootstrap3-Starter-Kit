@@ -21,10 +21,34 @@ h1, h2, h3, h4, h5, h6, button, .btn {font-family: 'Montserrat', sans-serif;}
 .overflow-hidden {overflow: hidden;}
 .overflow-visible {overflow: visible !important;}
 .inline-block {display: inline-block;}
+form {display: block; width: 100%;}
+
+/*#############################################*/
+/*responsive image boxes for grid - medium grid*/
+.grid-img-box-md {height:160px; line-height: 150px; display: flex; align-items: center; overflow:hidden; vertical-align:middle; text-align:center; background-color: #f4f4f4; border:1px solid #eee;}
+.grid-img-box-md a {margin:0 auto !important; display:inline-block;}
+.grid-img-box-md img {max-height:160px; margin: 0 auto !important; display: inline-block !important; max-width: 100%;}
+
+/*responsive image boxes for grid - small grid*/
+.grid-img-box-sm {height:80px; line-height: 70px; display: flex; align-items: center; overflow:hidden; vertical-align:middle; text-align:center; background-color: #f4f4f4; border:1px solid #eee;}
+.grid-img-box-sm a {margin:0 auto !important; display:inline-block;}
+.grid-img-box-sm img {max-height:80px; margin: 0 auto !important; display: inline-block !important; max-width: 100%;}
+
+/*responsive image boxes for grid - large grid*/
+.grid-img-box-lg {height:500px; line-height: 490px; display: flex; align-items: center; overflow:hidden; vertical-align:middle; text-align:center; background-color: #f4f4f4; border:1px solid #eee;}
+.grid-img-box-lg a {margin:0 auto !important; display:inline-block;}
+.grid-img-box-lg img {max-height:500px; margin: 0 auto !important; display: inline-block !important; max-width: 100%;}
+
+/*responsive image boxes for grid - table method*/
+.grid-tbl {display: table; width:100%; overflow:hidden; text-align:center; background-color: #f4f4f4; border:1px solid #eee;}
+.grid-tbl-cell {display: table-cell; height:200px; line-height: 200px; vertical-align:middle; text-align:center;}
+.grid-tbl-cell a {margin:0 auto !important; display:inline-block;}
+.grid-tbl-cell img {max-height:200px; margin: 0 auto !important; display: inline-block !important; max-width: 100%;}
+/*#############################################*/
 
 textarea {/*resize:vertical;*/ resize: none;}
 button:focus, .btn:focus, a:focus, input:focus, .form-control:focus {outline: 0;}
-.btn {background-image: none; border: none;}
+button, .btn {background-image: none; text-shadow: none;}
 
 .navbar {margin-bottom: 0;}
 
@@ -225,10 +249,47 @@ body .sticky-footer {
 .bx-logos .slide {height:80px; line-height: 70px; display: inline-block !important; align-items: center; overflow:hidden; vertical-align:middle; text-align:center; background-color: #f4f4f4; border:1px solid #eee; margin: 2px; width: 24%; float: none;}
 .bx-logos .slide img {max-height:76px !important; margin: 0 auto !important; display: inline-block !important; width: auto !important; max-width: 100% !important;}
 
+/*Placeholder*/
 
-/*responsive image boxes for grid*/
-.grid-img-box {height:160px; line-height: 150px; display: flex; align-items: center; overflow:hidden; vertical-align:middle; text-align:center;}
-.grid-img-box a {margin:auto !important; vertical-align:middle; display:inline-block; width: 100%;}
-.grid-img-box img {max-height:160px; margin: 0 auto !important; display: inline-block !important; width: auto !important;}
+.custom-placeholder .form-control::placeholder { 
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ff6600;
+}
+.custom-placeholder .form-control:-ms-input-placeholder { 
+    /* Internet Explorer 10-11 */
+    color: #ff6600;
+}
+.custom-placeholder .form-control::-ms-input-placeholder { 
+    /* Microsoft Edge */
+    color: #ff6600;
+}
+.custom-placeholder .form-control::-webkit-input-placeholder { 
+  /* Chrome/Opera/Safari */
+  color: #ff6600;
+}
+.custom-placeholder .form-control::-moz-placeholder { 
+  /* Firefox 19+ */
+  color: #ff6600;
+}
+.custom-placeholder .form-control:-moz-placeholder { 
+  /* Firefox 18- */
+  color: #ff6600;
+}
+
+.fa-no-label, .fa-w-label {position: relative;}
+.fa-no-label .fa {position: absolute; left: 6px; top: 10px;}
+.fa-w-label .fa {position: absolute; left: 6px; top: 35px;}
+.fa-w-label .form-control, .fa-no-label .form-control {padding-left: 26px;}
+
+.custom-select {position: relative;}
+.custom-select .fa {position: absolute; right: 10px; top: 10px;}
+.custom-select select { padding-right: 26px;
+  appearance: none; -webkit-appearance: none; -ms-appearance: none; -moz-appearance: none; -o-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+
+
+
 
 
