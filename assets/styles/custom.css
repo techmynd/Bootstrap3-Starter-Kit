@@ -289,7 +289,12 @@ body .sticky-footer {
   text-overflow: '';
 }
 
-
+.hidden-check, .specify-other, .realradio { display: none; }
+.click-change { background:url('../images/cb-off.png') no-repeat left 2px; background-size: 14px 14px; padding-left: 20px !important; }
+.check-on { background:url('../images/cb-on.png') no-repeat left 2px; background-size: 14px 14px; padding-left: 20px !important; }
+.custom-radios label {padding-left: 0px;}
+.custom-radio { background:url('../images/rb-off.png') no-repeat left 2px; background-size: 14px 14px; padding-left: 20px !important; }
+.custom-radio-current, .first-radio { background:url('../images/rb-on.png') no-repeat left 2px; background-size: 14px 14px; padding-left: 20px !important; }
 
 
 

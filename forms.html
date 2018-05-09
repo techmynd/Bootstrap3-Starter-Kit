@@ -349,6 +349,137 @@
               </div>
             </div>
           </div>
+
+          <div class="clear40"></div>
+
+          <div class="row">
+
+            <div class="col-md-12">  
+              
+                  <label>Custom Checkboxes</label>
+              
+            </div>
+              
+            <div class="col-md-3 col-sm-6">
+                <div class="checkbox">
+                  <input type="checkbox" class="hidden-check" value="Yes" id="chk1">
+                  <label class="click-change">Web Application
+                  </label>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="checkbox">
+                  <input type="checkbox" class="hidden-check" value="Yes" id="chk2">
+                  <label class="click-change">Mobile App
+                  </label>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="checkbox">
+                  <input type="checkbox" class="hidden-check" value="Yes" id="chk3"> 
+                  <label class="click-change">Shopping Cart
+                  </label>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="checkbox">
+                  <input type="checkbox" class="hidden-check" value="Yes" id="chk4"> 
+                  <label class="click-change">Code Review
+                  </label>
+                </div>
+            </div>
+              
+            <div class="col-md-3 col-sm-6">
+                <div class="checkbox">
+                  <input type="checkbox" class="hidden-check" value="Yes" id="chk5"> 
+                  <label class="click-change">Design
+                  </label>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="checkbox">
+                  <input type="checkbox" class="hidden-check" value="Yes" id="chk6">
+                  <label class="click-change">Frontend
+                  </label>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="checkbox">
+                  <input type="checkbox" class="hidden-check" value="Yes" id="chk7"> 
+                  <label class="click-change">Admin Panel
+                  </label>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="checkbox">
+                  <input type="checkbox" class="hidden-check" value="Yes" id="chk8"> 
+                  <label class="click-change">Other
+                  </label>
+                </div>
+            </div>
+
+            <div class="clear"></div>
+            <div class="col-md-12 specify-other">
+            <div class="clear10"></div>
+              <div class="form-group">
+                <label>Please Specify</label>
+                <input class="form-control" name="Other Project" id="otherProject">
+              </div>
+            </div>
+
+          </div>
+
+          <div class="clear40"></div>
+
+          <div class="row custom-radios">
+
+              <div class="col-md-12">  
+                    <label>Custom Radios</label>
+              </div>
+              
+              <div class="col-md-3 col-sm-6">
+                  <div class="radio">
+                    <label>
+                      <!--
+                      checked by default - uncomment this
+                      <input type="radio" class="realradio" name="optionsRadiosDate" id="optionsRadios1" value="Immediately" checked="">
+                      <div class="custom-radio first-radio">Immediately</div>
+                      -->
+
+                      <input type="radio" class="realradio" name="optionsRadiosDate" id="optionsRadios1" value="Immediately">
+                      <div class="custom-radio">Immediately</div>
+
+                    </label>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="radio">
+                    <label>
+                      <input type="radio" class="realradio" name="optionsRadiosDate" id="optionsRadios2" value="This Month">
+                      <div class="custom-radio">This Month</div>
+                    </label>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="radio">
+                    <label>
+                      <input type="radio" class="realradio" name="optionsRadiosDate" id="optionsRadios3" value="Near Future">
+                      <div class="custom-radio">Near Future</div>
+                    </label>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="radio">
+                    <label>
+                      <input type="radio" class="realradio" name="optionsRadiosDate" id="optionsRadios4" value="Not Sure">
+                      <div class="custom-radio">Not Sure</div>
+                    </label>
+                  </div>
+              </div>
+
+            </div>
+
+            <div class="clear40"></div>
         
 
 
@@ -373,6 +504,51 @@
     <script src="assets/scripts/jquery.flexslider-min.js"></script>
     <script src="assets/scripts/owl.carousel.min.js"></script>
     <script src="assets/scripts/custom.js"></script>
+
+
+
+<script>
+$(document).ready(function(){
+
+    // custom checkboxes starts
+    $(".click-change").click(function(){
+      if($.trim($(this).text()) == "Other")
+      {
+        if($(this).parent().find(".hidden-check").is(':checked'))
+        {
+          $('.specify-other').fadeOut('fast');
+        }else
+            {
+            $('.specify-other').fadeIn('slow');
+            }
+      }
+       $(this).toggleClass('check-on');
+        if($(this).hasClass("check-on"))
+        {
+          $(this).parent().find(".hidden-check").prop("checked", true)
+        }else
+            {
+              $(this).parent().find(".hidden-check").prop("checked", false)
+            }
+    });
+    // custom checkboxes end
+
+    // custom radioes 1 starts
+    $(".custom-radio").click(function(){
+      $(".custom-radio").removeClass("custom-radio-current")
+      $(".custom-radio").removeClass("first-radio")
+        $(this).toggleClass('custom-radio-current');
+        if($(this).hasClass("custom-radio-current"))
+        {
+          $(this).parent().find(".real-radio").prop("checked", true)
+        }else
+            {
+              $(this).parent().find(".real-radio").prop("checked", false)
+            }
+    });
+    // custom radioes 1 end
+});
+</script>
 
   </body>
 </html>
