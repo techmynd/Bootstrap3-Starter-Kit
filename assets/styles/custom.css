@@ -296,5 +296,8 @@ body .sticky-footer {
 .custom-radio { background:url('../images/rb-off.png') no-repeat left 2px; background-size: 14px 14px; padding-left: 20px !important; }
 .custom-radio-current, .first-radio { background:url('../images/rb-on.png') no-repeat left 2px; background-size: 14px 14px; padding-left: 20px !important; }
 
+/*Fontawesome*/
+.address-box-icons li {padding-left: 30px; position: relative; margin-bottom: 10px;}
+.address-box-icons .fa {position: absolute; left:0; top: 3px;}
 
 
