@@ -29,7 +29,6 @@ $(window).load(function() {
 });
 
 // wow animation
-/*
 var wow = new WOW(
   {
     boxClass:     'wow',      // animated element css class (default is wow)
@@ -45,7 +44,7 @@ var wow = new WOW(
   }
 );
 wow.init();
-*/
+
 
 
 /*Plain JS*/
