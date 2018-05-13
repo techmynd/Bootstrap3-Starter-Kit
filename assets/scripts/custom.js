@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  
+
   /*just toggle*/
   $('.toggleTrigger').click(function(event) {
     event.preventDefault();
@@ -19,6 +19,29 @@ $(document).ready(function() {
   //   $(this).closest('.collapsable').find('.nav-tab-line').stop().slideToggle('fast');
   //   $(this).closest('.collapsable').find('.check-circle span').stop().toggleClass('fa-angle-right fa-angle-down');
   // });
+
+  // collapsable widgets // with single function
+  $('.widget-expandable .title a').on('click', function(event){
+    event.preventDefault();
+    $(this).closest('.widget-expandable').find('.w-body').stop().slideToggle('fast');
+    $(this).closest('.widget-expandable').find('.title a i').stop().toggleClass('fa-minus fa-plus');
+  });
+
+  $('.widget-expandable-reverse .title a').on('click', function(event){
+    event.preventDefault();
+    $(this).closest('.widget-expandable-reverse').find('.w-body').stop().slideToggle('fast');
+    $(this).closest('.widget-expandable-reverse').find('.title a i').stop().toggleClass('fa-minus fa-plus');
+  });
+  // collapsable widgets // with single function
+
+  // categories collapse starts
+  $(".collapsable a").on('click', function(event){
+    event.preventDefault();
+    $(this).closest('.collapsable').find('.nav').stop().slideToggle('fast');
+    $(this).closest('.collapsable').find('a .fa').stop().toggleClass('fa-angle-right fa-angle-down');
+  });
+  // categories collapse ends
+
 
 });
 
@@ -82,25 +105,7 @@ $(window).scroll(function() {
 // stick header ends
 */
 
-/////// Bootstrap Accordian FIX - move control to the top of opened tab - onclick - start
-$('#accordion').on('shown.bs.collapse', function (e) {
 
-  // Validate this panel belongs to this accordian, and not an embedded one
-  var actualAccordianId = $('a[href="#' + $(e.target).attr('id') + '"').data('parent');
-  var targetAccordianId = '#' + $(this).attr('id');
-  if (actualAccordianId !== targetAccordianId) return;
-
-  var clickedHeader = $(this).find('.panel > .collapse.in').closest('.panel').find('.panel-heading');
-  var offset = clickedHeader.offset();
-  var top = $(window).scrollTop();
-  if(offset) {
-    var topOfHeader = offset.top;
-    if(topOfHeader < top) {
-      $('html,body').animate({ scrollTop: topOfHeader}, 100, 'swing');
-    }
-  }
-});
-/////// Bootstrap Accordian FIX - move control to the top of opened tab - onclick - end
 
 /*
 // jquery tabs
@@ -122,12 +127,37 @@ $('.dropdown').on('hide.bs.dropdown', function(e){
   $(this).find('.dropdown-menu').first().stop(true, true).slideUp("fast");
 });
 
-// bootstrap accordian - toggle icons - help page
-var selectIds = $('#collapseOne,#collapseTwo,#collapseThree,#collapseFour,#collapseFive,#collapseSix,#collapseSeven,#collapseEight,#collapseNine,#collapseTen');
+
+*/
+
+// bootstrap accordian - toggle icons
+var selectIds = $('#collapseOne,#collapseTwo,#collapseThree,.panel-collapse');
 $(function ($) {
     selectIds.on('show.bs.collapse hidden.bs.collapse', function () {
-        $(this).prev().find('.glyphicon').toggleClass('glyphicon-plus glyphicon-minus');
-    })
+        $(this).prev().find('.fa').toggleClass('fa-plus fa-minus');
+        $(this).prev().find('.icon').toggleClass('ion-ios-add ion-ios-remove');
+        $(this).prev().find('.icnc').toggleClass('ion-ios-add-circle-outline ion-ios-remove-circle-outline');
+    });
 });
-// bootstrap accordian - toggle icons - help page
-*/
+// bootstrap accordian - toggle icons
+
+/////// Bootstrap Accordian FIX - move control to the top of opened tab - onclick - start
+$('#accordion').on('shown.bs.collapse', function (e) {
+
+  // Validate this panel belongs to this accordian, and not an embedded one
+  var actualAccordianId = $('a[href="#' + $(e.target).attr('id') + '"').data('parent');
+  var targetAccordianId = '#' + $(this).attr('id');
+  if (actualAccordianId !== targetAccordianId) return;
+
+  var clickedHeader = $(this).find('.panel > .collapse.in').closest('.panel').find('.panel-heading');
+  var offset = clickedHeader.offset();
+  var top = $(window).scrollTop();
+  if(offset) {
+    var topOfHeader = offset.top;
+    if(topOfHeader < top) {
+      $('html,body').animate({ scrollTop: topOfHeader}, 400, 'swing');
+    }
+  }
+});
+/////// Bootstrap Accordian FIX - move control to the top of opened tab - onclick - end
+

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 
-    <title>Flexslider - Full Screen</title>
+    <title>Sliding Div - Affix</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -36,7 +36,7 @@
     .navbar-fixed-top-custom sticks header to top and adds padding from top for content
     .pg-wrapper is like second body coz we can not apply classes to body - but we can have div with .pg-wrapper in every partial pages that will be called in main index template
     -->
-    <div class="pg-wrapper sticky-footer navbar-fixed-top-custom transparent-nav">
+    <div class="pg-wrapper navbar-fixed-top-custom">
 
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default">
@@ -61,13 +61,12 @@
                 <li><a href="carousel-3.html">Multiple Sliders / images</a></li>
               </ul>
             </li>
-            <li class="dropdown active">
+            <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Flex Slider <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="flexslider-1.html">Single / Random Height / images</a></li>
-                <li class="active"><a href="flexslider-2.html">Single / Screen Height / BGs</a></li>
+                <li><a href="flexslider-2.html">Single / Screen Height / BGs</a></li>
                 <li><a href="flexslider-3.html">Multiple Sliders / images</a></li>
-                <li><a href="flexslider-4.html">Link Based Slider / Two sections</a></li>
               </ul>
             </li>
             <li class="dropdown">
@@ -87,10 +86,9 @@
                 <li><a href="bx-4.html">Multiple Sliders / images</a></li>
               </ul>
             </li>
-            
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
+            <li class="dropdown active">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Components <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="products-grid.html">Products Grid</a></li>
@@ -105,7 +103,7 @@
                 <li><a href="modal.html">Modal</a></li>
                 <li><a href="accordion.html">Accordion</a></li>
                 <li><a href="custom-multiple-collapse.html">Custom Multiple Collapse</a></li>
-                <li><a href="sliding-div.html">Sliding Div</a></li>
+                <li class="active"><a href="sliding-div.html">Sliding Div</a></li>
                 <li><a href="sliding-left-menu.html">Sliding Left Menu</a></li>
                 <li><a href="data-table.html">Data Table</a></li>
                 <li><a href="block-effects.html">Blockchain Threads Effect</a></li>
@@ -117,28 +115,65 @@
       </div>
     </nav>
 
-    <div class="sliderWrap">
-      <div class="flexslider fs-full-screen flex-arrows-space">
-        <ul class="slides">
-          <li style="background-image: url('assets/images/slider-1.jpg');">
-          </li>
-          <li style="background-image: url('assets/images/slider-2.jpg');">
-          </li>
-          <li style="background-image: url('assets/images/slider-3.jpg');">
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="clear40"></div>
+  
     <div class="container">
-      <h2>Flex Slider - BGs - Slide or Fade - Full Screen</h2>
-      <p>Use above flexslider for sliding backgrounds. This example uses background images. Flex slider is not good with text in slides unless its just one text over all slides.</p>
-      <p>Use class <strong>show-arrows</strong> with <strong>flexslider</strong> main div, to show permanent arrows.</p>
-    </div>
-    <div class="clear40"></div>
+        
+        <h2>Sliding Div - Affix</h2>
 
-    <footer class="footer">
+        <div class="row">
+        <div class="col-md-4" style="position:relative; height:100vh;">
+          <ul id="nav1" style="width:100%; background-color:#eee;">
+            <li><a href="#">Section One</a></li>
+            <li><a href="#">Section Two</a></li>
+            <li><a href="#">Section Three</a></li>
+            <li><a href="#">Section One</a></li>
+            <li><a href="#">Section Two</a></li>
+            <li><a href="#">Section Three</a></li>
+            <li><a href="#">Section One</a></li>
+            <li><a href="#">Section One</a></li>
+            <li><a href="#">Section Two</a></li>
+            <li><a href="#">Section Three</a></li>
+            <li><a href="#">Section One</a></li>
+            <li><a href="#">Section Two</a></li>
+            <li><a href="#">Section Three</a></li>
+            <li><a href="#">Section One</a></li>
+            <li><a href="#">Section One</a></li>
+            <li><a href="#">Section Two</a></li>
+            <li><a href="#">Section Three</a></li>
+            <li><a href="#">Section One</a></li>
+            <li><a href="#">Section Two</a></li>
+            <li><a href="#">Section Three</a></li>
+            <li><a href="#">Section One</a></li>
+            <li><a href="#">Section One</a></li>
+            <li><a href="#">Section Two</a></li>
+            <li><a href="#">Section Three</a></li>
+            <li><a href="#">Section One</a></li>
+            <li><a href="#">Section Two</a></li>
+            <li><a href="#">Section Three</a></li>
+            <li><a href="#">Section One</a></li>
+            <li><a href="#">Section One</a></li>
+            <li><a href="#">Section Two</a></li>
+            <li><a href="#">Section Three</a></li>
+            <li><a href="#">Section One</a></li>
+            <li><a href="#">Section Two</a></li>
+            <li><a href="#">Section Three</a></li>
+            <li><a href="#">Section One</a></li>       
+          </ul>
+          </div>
+          <div class="col-md-8">
+            This example uses <a href="http://leafo.net/sticky-kit/" target="_blank">Sticky Kit/</a>. The initialized div will be sticky inside its parent div. Parent dive should have enough height and it should be of relative position. Its best to not use sticky footer and sticky header in case you are using the sticky div plugin such as this. Because sticky div seeks to 0 to initialize and if header is fixed, whole content including sticky div goes behind sticky header.
+            <br>
+            <strong>This example does not work with the sticky header or footer.</strong><br>
+            <a href="sliding-div.html"><strong>Example 1 > sliding-div.html</strong></a>
+            
+          </div>
+        </div>
+
+    </div>
+  
+
+
+    <footer class="footer" style="height:500px;">
       <div class="container">
         <p class="text-muted text-center">Copyrights &copy;<span id="yearJS"></span> <a href="#">SiteName</a>. All Rights Reserved.</p>
       </div>
@@ -147,50 +182,20 @@
     </div><!--.pg-wrapper ends-->
 
     <script src="assets/scripts/jquery.min.js"></script>
-    <script src="assets/scripts/jquery.easing.js"></script>
     <script src="assets/scripts/bootstrap.min.js"></script>
     <script src="assets/scripts/wow.min.js"></script>
+    <script src="assets/scripts/jquery.easing.js"></script>
     <script src="assets/scripts/jquery.flexslider-min.js"></script>
     <script src="assets/scripts/owl.carousel.min.js"></script>
+    <script src="assets/scripts/jquery.sticky-kit.min.js"></script>
     <script src="assets/scripts/custom.js"></script>
-
-    <script>
-    $('.flexslider').hide();
-    $(document).ready(function(){
-      $('.flexslider').fadeIn('slow');
-    });  
-      
-      $(window).load(function() {
-        $('.flexslider').flexslider({
-          animation: "slide",
-          // animation: "fade",
-          
-          // easing: "swing",
-          // direction: "vertical", // direction: "horizontal",
-          
-          smoothHeight: false,
-          animationSpeed: "600",
-          randomize: false,
-          pauseOnHover: true,
-          useCSS: true,
-          touch: true,
-          keyboard: true,
-
-          // dots
-          controlNav: true,
-          // continuous scroll
-          animationLoop: true,
-          
-          // auto loop
-           slideshow: false
-          // slideshowSpeed: "7000",
-          // pausePlay: false,
-
-        });
-      });
-
     
-      
+    <script>
+      $(document).ready(function() {
+        // #nav1 will stick inside a its parent div that has relative position
+        // parent div should have enough height - may be through height > 100vh or table-cell height
+        $("#nav1").stick_in_parent();
+      });
     </script>
 
   </body>

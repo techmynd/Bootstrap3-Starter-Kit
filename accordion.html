@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 
-    <title>VH</title>
+    <title>Accordion</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -18,6 +18,7 @@
     <link href="assets/styles/owl.carousel.min.css" rel="stylesheet">
     <link href="assets/styles/owl.theme.default.min.css" rel="stylesheet">
     <link href="assets/styles/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/styles/ionicons.min.css" rel="stylesheet">
 
     <link href="assets/styles/hover-min.css" rel="stylesheet">
     <link href="assets/styles/animate.css" rel="stylesheet">
@@ -96,12 +97,12 @@
                 <li><a href="fontawesome.html">Fontawesome</a></li>
                 <li><a href="txt-effects.html">Text Effects</a></li>
                 <li><a href="wowjs.html">WOW Animations</a></li>
-                <li class="active"><a href="vh.html">VH Centered Elements</a></li>
+                <li><a href="vh.html">VH Centered Elements</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="post.html">Post</a></li>
                 <li><a href="go-t0.html">Go To Links</a></li>
                 <li><a href="modal.html">Modal</a></li>
-                <li><a href="accordion.html">Accordion</a></li>
+                <li class="active"><a href="accordion.html">Accordion</a></li>
                 <li><a href="custom-multiple-collapse.html">Custom Multiple Collapse</a></li>
                 <li><a href="sliding-div.html">Sliding Div</a></li>
                 <li><a href="sliding-left-menu.html">Sliding Left Menu</a></li>
@@ -117,18 +118,168 @@
 
     <div class="container">
         
-        <h2>VH Middle Alignment</h2>
+        <h2>Accordion</h2>
 
-        <p>Vertically align middle by using VH</p>
-
-          <div class="vh-wrapper">
-            <p class="vh-50 text-center">Best examples are full height header sliders. height > 100vh takes full available height. Must be used with relative so you can place absolute positioned elements in it.
-            <br>Classes in CSS are 
-            <br>.vh-wrapper and .vh-50 and .absolute-50-middle
-            </p>
-          </div>
+        <div class="clear40"></div>
         
+        <!--.icon-right or .icon-left-->
+        <div class="accordion-wrap">
+          <div class="panel-group icon-right" id="accordion">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                    Collapsible Group Item #1
+                  </a>
+                  <i class="icon ion-ios-remove"></i>
+                </h4>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                  Anim pariatur cliche reprehenderit lorem1000
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                    Collapsible Group Item #2
+                  </a>
+                  <i class="icon ion-ios-add"></i>
+                </h4>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                  Anim pariatur cliche reprehenderit
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                    Collapsible Group Item #3
+                  </a>
+                  <i class="icon ion-ios-add"></i>
+                </h4>
+              </div>
+              <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                  Anim pariatur cliche reprehenderit.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="clear40"></div>
+        
+        <div class="accordion-wrap">
+          <div class="panel-group icon-left" id="accordion2">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion2" href="#cOne">
+                    Collapsible Group Item #1
+                  </a>
+                  <i class="icon ion-ios-add"></i>
+                </h4>
+              </div>
+              <div id="cOne" class="panel-collapse collapse">
+                <div class="panel-body">
+                  Anim pariatur cliche reprehenderit lorem1000
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#cTwo">
+                    Collapsible Group Item #2
+                  </a>
+                  <i class="icon ion-ios-add"></i>
+                </h4>
+              </div>
+              <div id="cTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                  Anim pariatur cliche reprehenderit
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#cThree">
+                    Collapsible Group Item #3
+                  </a>
+                  <i class="icon ion-ios-add"></i>
+                </h4>
+              </div>
+              <div id="cThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                  Anim pariatur cliche reprehenderit.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="clear40"></div>
+        
+        <div class="accordion-wrap acc-theme-grey">
+          <div class="panel-group icon-left icon-circle" id="accordion3">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion3" href="#dOne">
+                    Collapsible Group Item #1
+                  </a>
+                  <i class="icon icnc ion-ios-add-circle-outline"></i>
+                </h4>
+              </div>
+              <div id="dOne" class="panel-collapse collapse">
+                <div class="panel-body">
+                  Anim pariatur cliche reprehenderit lorem1000
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion3" href="#dTwo">
+                    Collapsible Group Item #2
+                  </a>
+                  <i class="icon icnc ion-ios-add-circle-outline"></i>
+                </h4>
+              </div>
+              <div id="dTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                  Anim pariatur cliche reprehenderit
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion3" href="#dThree">
+                    Collapsible Group Item #3
+                  </a>
+                  <i class="icon icnc ion-ios-add-circle-outline"></i>
+                </h4>
+              </div>
+              <div id="dThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                  Anim pariatur cliche reprehenderit.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
     </div>
+
+    <div class="clear40"></div>
 
 
     <footer class="footer">
@@ -149,4 +300,3 @@
 
   </body>
 </html>
-

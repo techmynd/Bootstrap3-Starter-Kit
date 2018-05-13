@@ -21,6 +21,7 @@ h1, h2, h3, h4, h5, h6, button, .btn {font-family: 'Montserrat', sans-serif;}
 .overflow-hidden {overflow: hidden;}
 .overflow-visible {overflow: visible !important;}
 .inline-block {display: inline-block;}
+.full {width:100%; display: block; clear: both;}
 form {display: block; width: 100%;}
 
 .vh-wrapper {height:100vh; position: relative; width: 100%;}
@@ -58,6 +59,8 @@ button:focus, .btn:focus, a:focus, input:focus, .form-control:focus {outline: 0;
 button, .btn {background-image: none; text-shadow: none;}
 
 .navbar {margin-bottom: 0;}
+
+.footer {height: 60px; background-color: #eee; padding-top: 20px;}
 
 /*sticky footer starts*/
 /*add sticky-footer class to body to make footer sticky*/
@@ -257,7 +260,6 @@ body .sticky-footer {
 .bx-logos .slide img {max-height:76px !important; margin: 0 auto !important; display: inline-block !important; width: auto !important; max-width: 100% !important;}
 
 /*Placeholder*/
-
 .custom-placeholder .form-control::placeholder { 
     /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #ff6600;
@@ -307,4 +309,137 @@ body .sticky-footer {
 .address-box-icons li {padding-left: 30px; position: relative; margin-bottom: 10px;}
 .address-box-icons .fa {position: absolute; left:0; top: 3px;}
 
+
+.blog .panel-title {font-family:'Nunito', sans-serif; color:#000;}
+.blog .search-panel .form-control {min-width:260px;}
+.blog .sidebar-titles h3 {font-size:20px; font-family:'Nunito', sans-serif; color:#1b6fa6; border-bottom:1px solid #eee; padding-bottom:8px;}
+.blog .sidebar-titles li {margin:0 0 4px 0; border-bottom:1px solid #eee; padding:4px 0 10px 0;}
+.blog .sidebar-titles li a {color:#333;}
+.blog .sidebar-titles li a {color:#000;}
+
+.blog .info .fa {color:#CCC;}
+.blog .info {padding:10px 0;}
+.blog .info .pull-left {font-size:12px;}
+.blog .info .pull-left a {margin-right:10px;}
+.blog .info .pull-right a {margin:0 2px;}
+
+.blog .single-post .more a {float:left;}
+.blog .single-post .more .fa {float:left; margin:5px 0 0 9px; color:#ccc;}
+.blog .single-post .title {font-size:28px; margin-top:0; padding-top:0; color:#1b6fa6;}
+.blog .post-details {margin-top:20px;}
+.blog .post-details p {font-size:16px; line-height:1.7em;}
+.blog .single-post .info .fa-facebook {color:#3b5998;}
+.blog .single-post .info .fa-twitter {color:#2caae1;}
+.blog .single-post .info .fa-google-plus {color:#da4835;}
+
+.blog .signin {margin:160px auto;}
+.blog .signin .panel {display:inline-block;}
+.blog .signin .panel-title {color:#1b6fa6; font-size:22px;}
+
+.blog .inner-addon {position: relative;}
+.blog .inner-addon .glyphicon {position: absolute; padding: 10px; pointer-events: none;}
+.blog .left-addon .glyphicon  {left:  0px;}
+.blog .right-addon .glyphicon {right: 0px;}
+.blog .left-addon input  {padding-left:  30px;}
+.blog .right-addon input {padding-right: 30px;}
+
+/*flexslider 4*/
+
+#flexslider4 .tm-left { background-color: #1b8c58; color: #fff; vertical-align: middle; text-align: center; }
+#flexslider4 .testimonial-txt { display: table-cell; vertical-align: middle; height: 400px; padding: 20px 60px; }
+#flexslider4 .tm-right { background-color: #000; color: #fff; vertical-align: middle; text-align: center; height: 400px; overflow: hidden; }
+#flexslider4 .photo-1 { opacity: 0.5; position: absolute; width: 100%; height: 100%; z-index: 999; left: 0; }
+#flexslider4 .testimonial-logo { height: 400px; position: relative; overflow: hidden; z-index: 9999; width: 100%; text-align: center; opacity: 1; }
+#flexslider4 .testimonial-logo td img {  }
+#flexslider4 .tst-btn { border-radius: 20px; background-image: 0; background:transparent; border:2px solid #56b58a; color:#fff; }
+#flexslider4 .tst-btn:hover { border-color:#fff; background:transparent; color:#fff; }
+#flexslider4 .slider-nav div { display: inline-block; cursor: pointer; margin: 0 10px; }
+#flexslider4 .side-blue { background-color:#1e8ad2; }
+#flexslider4 .side-blue .tst-btn { border: 2px solid #b8e1fd; }
+#flexslider4 .side-orange { background-color:#ff5500; }
+#flexslider4 .side-orange .tst-btn { border: 2px solid #ffceb5; }
+#flexslider4 .side-purple { background-color:#482b62; }
+#flexslider4 .side-purple .tst-btn { border: 2px solid #e1c0ff; }
+#flexslider4 .t-words { font-size: 22px; letter-spacing: 1px; font-weight: 100 !important; font-family: 'Nunito', sans-serif; }
+#flexslider4 .t-name { margin-top: 10px; font-size: 14px; letter-spacing: 1px; }
+#flexslider4 .t-designation { margin-top: -10px; font-size: 14px; letter-spacing: 1px; }
+#flexslider4 .testimonial-txt .seperator { display:inline-block; width: 50px; height: 4px; background-color: #fff; opacity: 0.5; border-radius: 10px; }
+#flexslider4 #carousel .slides img { width: auto !important; max-width: 100% !important; cursor: pointer; }
+#flexslider4 #carousel { margin: 0 80px;  }
+#flexslider4 .custom-controls-responsive { text-align: center; display: none; }
+#flexslider4 .custom-controls-responsive .prev, .flexslider4 .custom-controls-responsive .next { display: inline-block; margin: 0 10px;  }
+#flexslider4.slider { position: relative; }
+#flexslider4 .arrow-controls .prev { display: inline-block; position: absolute; left: 22px; bottom: 28px; width: 30px; height: 20px; z-index: 999; }
+#flexslider4 .arrow-controls .next { display: inline-block; position: absolute; right: 22px; bottom: 28px; width: 30px; height: 20px; z-index: 999; }
+#flexslider4 .arrow-controls .next .fa-lg, .flexslider4 .arrow-controls .prev .fa-lg { padding-left: 5px; color: #000; }
+#flexslider4 .flex-control-paging {display: none;}
+
+/*Bootstrap Accordion Starts*/
+.accordion-wrap .panel-title {position: relative;}
+.accordion-wrap .icon-right .panel-title .fa {display: inline-block; position: absolute; right: 6px; top: 10px; color: #666;}
+.accordion-wrap .icon-left .panel-title .fa {display: inline-block; position: absolute; left: 6px; top: 10px; color: #666;}
+.accordion-wrap .icon-right .panel-title .icon {display: inline-block; position: absolute; right: 11px; top: 9px; color: #333; font-size: 18px;}
+.accordion-wrap .icon-left .panel-title .icon {display: inline-block; position: absolute; left: 11px; top: 9px; color: #333; font-size: 18px;}
+.accordion-wrap .icon-left.icon-circle .icon {left: 10px; top: 8px; font-size: 22px;}
+.accordion-wrap .panel-title a {display: block; position: relative; z-index: 998; padding: 11px 30px 10px 15px; font-size: 14px; font-weight: bold;}
+.accordion-wrap .icon-left.icon-circle .panel-title a {margin-left: 6px;}
+.accordion-wrap .icon-left .panel-title a {padding-left: 30px;}
+.accordion-wrap .icon-left .panel-body {padding-left: 31px;}
+.accordion-wrap .panel-heading {background-image: none !important; padding:0; background-color: #f4f4f4;}
+.accordion-wrap .panel-heading:hover {background-color: #eee;}
+.accordion-wrap .panel-group .panel {border-radius: 3px;}
+
+.acc-theme-grey .panel-default {border-color: transparent; background-color: #eee;}
+.acc-theme-grey .panel-heading, .acc-theme-blue .panel-heading:hover {background-color: transparent; border-color: transparent;}
+.acc-theme-grey .panel-default>.panel-heading+.panel-collapse>.panel-body {border-top: 0;}
+.acc-theme-grey .panel {box-shadow: none;}
+.acc-theme-grey .panel-title a {padding: 12px 30px 10px 15px;}
+.acc-theme-grey .icon-left .panel-body {padding-left: 38px;}
+/*Bootstrap Accordion Ends*/
+
+.widget-expandable, .widget-expandable-reverse {border-radius: 4px; overflow: hidden;}
+.widget-expandable .title, .widget-expandable-reverse .title {background-color: #eee; padding: 10px 15px; background: #eee;}
+.widget-expandable .caption, .widget-expandable-reverse .caption {float: left; color: #666; font-size: 15px;}
+.widget-expandable .fa, .widget-expandable-reverse .fa {float: right; display: inline-block; margin-top: 5px;}
+.widget-expandable .w-body, .widget-expandable-reverse .w-body {background-color: #f4f4f4; padding: 10px 15px; border-top: 1px solid #eee;}
+
+/*Categories Collapse*/
+.collapsable .fa-angle-down, .collapsable .fa-angle-up, .collapsable .fa-angle-right {float:right; display: inline-block; margin-top: 2px;}
+.collapsable .nav-tab-line {display: none;}
+.collapsable .all-cats {font-weight: normal !important;}
+.collapsable a {cursor: pointer; display: block; background-color: #f4f4f4; border-radius: 3px; padding: 5px 10px; margin-bottom: 2px; text-transform: uppercase !important; color: #333; text-decoration: none; border-bottom: 1px solid #e6e6e6; margin-left: 4px;}
+.collapsable a:first-child {font-weight: bold;}
+.collapsable a:hover {color: #000;}
+.collapsable .nav {background-color: #f4f4f4; margin-bottom: 2px; margin-left: 4px; margin-top: -4px; padding-bottom: 4px; border-radius: 0px 0px 4px 4px; margin-bottom: 3px; display: none;}
+.collapsable .nav li {padding:0; margin:0; text-transform: capitalize !important;}
+.collapsable .nav li a {padding:4px 4px 4px 10px; margin:0; text-transform: capitalize !important; color: #666; text-decoration: none; border-bottom: none; font-weight: normal; margin-left: 4px;}
+.collapsable .nav li:hover, .collapsable .nav li a:hover {background-color: inherit; color: #000;}
+.category-new {background-color: #eee; padding:6px 6px 2px 2px; border-radius: 4px; border-bottom: 1px solid #e6e6e6;}
+
+/*Sliding Menu*/
+.sliding-menu-backdrop {background-color:rgba(0,0,0,0.6); position: fixed; 
+  left:0; right:0; top:0; bottom:0; z-index: 9991; display: none;
+}
+.sliding-menu-wrapper {
+  background-color:#fff; position: absolute; 
+  left:-320px; top:0; bottom:0; z-index: 9992; 
+  width: 300px; box-shadow: 0 0 20px #000;
+}
+.sliding-menu {padding: 20px;}
+
+/*Partickes JS*/
+.particles-wrapper {position: relative; height: 400px;}
+canvas{display: block; vertical-align: bottom;}
+#particles-js{position:absolute; width: 100%; background-color: #b61924; 
+  background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%;
+  left: 0; right: 0; 
+  height: 400px;
+}
+.count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; 
+  font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; 
+  font-family: Helvetica, Arial, sans-serif; font-weight: bold; } 
+.js-count-particles{ font-size: 1.1em; } 
+#stats, .count-particles{ -webkit-user-select: none; margin-top: 5px; margin-left: 5px; } 
+#stats{ border-radius: 3px 3px 0 0; overflow: hidden; } 
+.count-particles{ border-radius: 0 0 3px 3px; }
 

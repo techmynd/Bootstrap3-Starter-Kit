@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 
-    <title>Flexslider - Full Screen</title>
+    <title>Modal</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -36,7 +36,7 @@
     .navbar-fixed-top-custom sticks header to top and adds padding from top for content
     .pg-wrapper is like second body coz we can not apply classes to body - but we can have div with .pg-wrapper in every partial pages that will be called in main index template
     -->
-    <div class="pg-wrapper sticky-footer navbar-fixed-top-custom transparent-nav">
+    <div class="pg-wrapper sticky-footer navbar-fixed-top-custom">
 
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default">
@@ -61,13 +61,12 @@
                 <li><a href="carousel-3.html">Multiple Sliders / images</a></li>
               </ul>
             </li>
-            <li class="dropdown active">
+            <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Flex Slider <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="flexslider-1.html">Single / Random Height / images</a></li>
-                <li class="active"><a href="flexslider-2.html">Single / Screen Height / BGs</a></li>
+                <li><a href="flexslider-2.html">Single / Screen Height / BGs</a></li>
                 <li><a href="flexslider-3.html">Multiple Sliders / images</a></li>
-                <li><a href="flexslider-4.html">Link Based Slider / Two sections</a></li>
               </ul>
             </li>
             <li class="dropdown">
@@ -87,10 +86,9 @@
                 <li><a href="bx-4.html">Multiple Sliders / images</a></li>
               </ul>
             </li>
-            
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
+            <li class="dropdown active">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Components <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="products-grid.html">Products Grid</a></li>
@@ -102,7 +100,7 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="post.html">Post</a></li>
                 <li><a href="go-t0.html">Go To Links</a></li>
-                <li><a href="modal.html">Modal</a></li>
+                <li class="active"><a href="modal.html">Modal</a></li>
                 <li><a href="accordion.html">Accordion</a></li>
                 <li><a href="custom-multiple-collapse.html">Custom Multiple Collapse</a></li>
                 <li><a href="sliding-div.html">Sliding Div</a></li>
@@ -117,26 +115,82 @@
       </div>
     </nav>
 
-    <div class="sliderWrap">
-      <div class="flexslider fs-full-screen flex-arrows-space">
-        <ul class="slides">
-          <li style="background-image: url('assets/images/slider-1.jpg');">
-          </li>
-          <li style="background-image: url('assets/images/slider-2.jpg');">
-          </li>
-          <li style="background-image: url('assets/images/slider-3.jpg');">
-          </li>
-        </ul>
+    <div class="container">
+        
+      <h2>Modal</h2>
+
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-1">
+        Launch regular modal
+      </button>
+
+      <div class="modal fade" id="modal-1" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <div class="clear20"></div>
+
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-2">
+        Launch Large modal
+      </button>
+
+      <div class="modal fade" id="modal-2" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="clear20"></div>
+
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-3">
+        Launch Small modal
+      </button>
+
+      <div class="modal fade" id="modal-3" tabindex="-1">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <div class="clear40"></div>
-    <div class="container">
-      <h2>Flex Slider - BGs - Slide or Fade - Full Screen</h2>
-      <p>Use above flexslider for sliding backgrounds. This example uses background images. Flex slider is not good with text in slides unless its just one text over all slides.</p>
-      <p>Use class <strong>show-arrows</strong> with <strong>flexslider</strong> main div, to show permanent arrows.</p>
-    </div>
-    <div class="clear40"></div>
 
     <footer class="footer">
       <div class="container">
@@ -147,51 +201,12 @@
     </div><!--.pg-wrapper ends-->
 
     <script src="assets/scripts/jquery.min.js"></script>
-    <script src="assets/scripts/jquery.easing.js"></script>
     <script src="assets/scripts/bootstrap.min.js"></script>
     <script src="assets/scripts/wow.min.js"></script>
+    <script src="assets/scripts/jquery.easing.js"></script>
     <script src="assets/scripts/jquery.flexslider-min.js"></script>
     <script src="assets/scripts/owl.carousel.min.js"></script>
     <script src="assets/scripts/custom.js"></script>
-
-    <script>
-    $('.flexslider').hide();
-    $(document).ready(function(){
-      $('.flexslider').fadeIn('slow');
-    });  
-      
-      $(window).load(function() {
-        $('.flexslider').flexslider({
-          animation: "slide",
-          // animation: "fade",
-          
-          // easing: "swing",
-          // direction: "vertical", // direction: "horizontal",
-          
-          smoothHeight: false,
-          animationSpeed: "600",
-          randomize: false,
-          pauseOnHover: true,
-          useCSS: true,
-          touch: true,
-          keyboard: true,
-
-          // dots
-          controlNav: true,
-          // continuous scroll
-          animationLoop: true,
-          
-          // auto loop
-           slideshow: false
-          // slideshowSpeed: "7000",
-          // pausePlay: false,
-
-        });
-      });
-
-    
-      
-    </script>
 
   </body>
 </html>
