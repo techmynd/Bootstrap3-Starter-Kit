@@ -36,7 +36,7 @@
     .navbar-fixed-top-custom sticks header to top and adds padding from top for content
     .pg-wrapper is like second body coz we can not apply classes to body - but we can have div with .pg-wrapper in every partial pages that will be called in main index template
     -->
-    <div class="pg-wrapper navbar-fixed-top-custom">
+    <div class="pg-wrapper sticky-footer">
 
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default">
@@ -115,14 +115,13 @@
       </div>
     </nav>
 
-  
     <div class="container">
         
         <h2>Sliding Div - Affix</h2>
 
         <div class="row">
-        <div class="col-md-4" style="position:relative; height:100vh;">
-          <ul id="nav1" style="width:100%; background-color:#eee;">
+        <div class="col-md-3 relative">
+          <ul id="nav1" style="width:250px; background-color:#eee;">
             <li><a href="#">Section One</a></li>
             <li><a href="#">Section Two</a></li>
             <li><a href="#">Section Three</a></li>
@@ -130,52 +129,27 @@
             <li><a href="#">Section Two</a></li>
             <li><a href="#">Section Three</a></li>
             <li><a href="#">Section One</a></li>
-            <li><a href="#">Section One</a></li>
-            <li><a href="#">Section Two</a></li>
-            <li><a href="#">Section Three</a></li>
-            <li><a href="#">Section One</a></li>
-            <li><a href="#">Section Two</a></li>
-            <li><a href="#">Section Three</a></li>
-            <li><a href="#">Section One</a></li>
-            <li><a href="#">Section One</a></li>
-            <li><a href="#">Section Two</a></li>
-            <li><a href="#">Section Three</a></li>
-            <li><a href="#">Section One</a></li>
-            <li><a href="#">Section Two</a></li>
-            <li><a href="#">Section Three</a></li>
-            <li><a href="#">Section One</a></li>
-            <li><a href="#">Section One</a></li>
-            <li><a href="#">Section Two</a></li>
-            <li><a href="#">Section Three</a></li>
-            <li><a href="#">Section One</a></li>
-            <li><a href="#">Section Two</a></li>
-            <li><a href="#">Section Three</a></li>
-            <li><a href="#">Section One</a></li>
-            <li><a href="#">Section One</a></li>
-            <li><a href="#">Section Two</a></li>
-            <li><a href="#">Section Three</a></li>
-            <li><a href="#">Section One</a></li>
-            <li><a href="#">Section Two</a></li>
-            <li><a href="#">Section Three</a></li>
-            <li><a href="#">Section One</a></li>       
           </ul>
           </div>
-          <div class="col-md-8">
-            This example uses <a href="http://leafo.net/sticky-kit/" target="_blank">Sticky Kit/</a>. The initialized div will be sticky inside its parent div. Parent dive should have enough height and it should be of relative position. Its best to not use sticky footer and sticky header in case you are using the sticky div plugin such as this. Because sticky div seeks to 0 to initialize and if header is fixed, whole content including sticky div goes behind sticky header.
-            <br>
-            <strong>This example does not work with the sticky header or footer.</strong><br>
-            <a href="sliding-div.html"><strong>Example 1 > sliding-div.html</strong></a><br>
-            <a href="sliding-div-3.html"><strong>Example 3 > Custom sticky sidebar</strong></a><br>
-
-            
+          <div class="col-md-9">
+           Custom JS sticky. This sticky checks if the window width is great than 991 and only in that condition if window scrolls down to sidebar height, sidebar sticks to top. This example shows <strong>perfect use of binding window resize event</strong>.
+           <br><br>
+           But this will not work if the sidebar height is more than content height and it needs width of the menu in pixels so that when it goes position fixed it does not go nuclear on page.
+           <br><br>
+           <a href="sliding-div.html"><strong>Sticky Div example 1</strong></a><br>
+           <a href="sliding-div-2.html"><strong>Sticky Div example 2 > with sticky header</strong></a><br>
           </div>
+
+          <div class="clear80"></div><div class="clear80"></div><div class="clear80"></div><div class="clear80"></div>
+          <div class="clear80"></div><div class="clear80"></div><div class="clear80"></div><div class="clear80"></div>
+          <div class="clear80"></div><div class="clear80"></div><div class="clear80"></div><div class="clear80"></div>
+
         </div>
 
     </div>
-  
 
 
-    <footer class="footer" style="height:500px;">
+    <footer class="footer">
       <div class="container">
         <p class="text-muted text-center">Copyrights &copy;<span id="yearJS"></span> <a href="#">SiteName</a>. All Rights Reserved.</p>
       </div>
@@ -191,13 +165,62 @@
     <script src="assets/scripts/owl.carousel.min.js"></script>
     <script src="assets/scripts/jquery.sticky-kit.min.js"></script>
     <script src="assets/scripts/custom.js"></script>
-    
+
     <script>
-      $(document).ready(function() {
-        // #nav1 will stick inside a its parent div that has relative position
-        // parent div should have enough height - may be through height > 100vh or table-cell height
-        $("#nav1").stick_in_parent();
-      });
+    
+    $(document).ready(function() {
+          if($(window).width() > 991) {
+            // on window scroll
+            $(window).scroll(function() {
+              var scroll = $(window).scrollTop();
+              if (scroll >= 113) {
+                $('#nav1').addClass('stick-sidebar');
+              }
+              else
+              {
+                $('#nav1').removeClass("stick-sidebar");
+              }
+            });
+            //////////////////
+          }
+          else
+          {
+            $('#nav1').removeClass("stick-sidebar");
+          }       
+    });
+
+
+    // window resize bind and handle stuff
+
+    function resizeHandler() {
+        if ($(window).width() > 991) 
+        {
+          
+          // do the thing
+          $(window).scroll(function(){
+              var scroll = $(window).scrollTop();
+              if (scroll >= 113) {
+                $('#nav1').addClass('stick-sidebar');
+              }
+              else
+              {
+                $('#nav1').removeClass("stick-sidebar");
+              }
+          });
+
+        } 
+        else
+          {
+            $(window).unbind('scroll');
+            // reverse the thing
+            $('#nav1').removeClass("stick-sidebar");
+          }
+    }
+    resizeHandler();
+    $(window).resize(resizeHandler);
+
+
+
     </script>
 
   </body>

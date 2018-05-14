@@ -421,7 +421,7 @@ body .sticky-footer {
   left:0; right:0; top:0; bottom:0; z-index: 9991; display: none;
 }
 .sliding-menu-wrapper {
-  background-color:#fff; position: absolute; 
+  background-color: rgba(255,255,255,0.9); position: absolute; 
   left:-320px; top:0; bottom:0; z-index: 9992; 
   width: 300px; box-shadow: 0 0 20px #000;
 }
@@ -443,3 +443,5 @@ canvas{display: block; vertical-align: bottom;}
 #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } 
 .count-particles{ border-radius: 0 0 3px 3px; }
 
+/*Custom Sticky Sidebar*/
+.stick-sidebar {position: fixed; top: 0; width:250px;}
