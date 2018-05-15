@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 
-    <title>Products Grid</title>
+    <title>Show li</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -23,6 +23,24 @@
     <link href="assets/styles/animate.css" rel="stylesheet">
     <link href="assets/styles/custom.css" rel="stylesheet">
     <link href="assets/styles/responsive.css" rel="stylesheet">
+
+    <style type="text/css">
+      div.collapseWrapper {overflow: hidden;}
+      .collapseMore {margin-top: 10px; margin-left: 17px; display: block; position: relative;}
+      .collapseMore:before
+      {
+        content: "\f107";
+        font-family: FontAwesome;
+        position: absolute;
+        left: -16px; top: 0; color: #000;
+      }
+      .expanded:before {
+        content: "\f106" !important;
+        font-family: FontAwesome;
+        position: absolute;
+        left: -20px; top: 0; color: #000;
+    }
+    </style>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -88,23 +106,23 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
+            <li class="dropdown active">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Concepts <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="full-width-bg.html">Full Width BG</a></li>
                 <li><a href="siblings-class.html">Class Toggle, Siblings, Childs</a></li>
                 <li><a href="cloning.html">Cloning</a></li>
-                <li><a href="show-li.html">Show Hide lis</a></li>
+                <li class="active"><a href="show-li.html">Show Hide lis</a></li>
                 <li><a href="Sticky-header-scroll.html">Sticky Header After Scroll</a></li>
                 <li><a href="switch-sides.html">Sides Switch</a></li>
               </ul>
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown active">
+            <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Components <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li class="active"><a href="products-grid.html">Products Grid</a></li>
+                <li><a href="products-grid.html">Products Grid</a></li>
                 <li><a href="forms.html">Form</a></li>
                 <li><a href="fontawesome.html">Fontawesome</a></li>
                 <li><a href="txt-effects.html">Text Effects</a></li>
@@ -130,118 +148,131 @@
 
     <div class="container">
         
-        <h2>Products Grid</h2>
+        <h2>Show Hide List Items</h2>
 
-        <p>Products grid aims to contain product images in a completely responsive wrapper that adjusts width height of image according to the wrapper.</p>
-
-        <h3>Small Grid</h3>
-        
-        <div class="row">
-          <div class="col-md-3">
-            <div class="grid-img-box-sm">
-              <a href="#"><img src="assets/images/1.png"></a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="grid-img-box-sm">
-              <a href="#"><img src="assets/images/2.png"></a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="grid-img-box-sm">
-              <a href="#"><img src="assets/images/3.png"></a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="grid-img-box-sm">
-              <a href="#"><img src="assets/images/favicon.png"></a>
-            </div>
-          </div>
-        </div>
-
-        <h3>Medium Grid</h3>
+        <p>Typically used in the long list of items. Its a collapsable list of items. View source for code.</p>
 
         <div class="row">
-          <div class="col-md-3">
-            <div class="grid-img-box-md">
-              <a href="#"><img src="assets/images/1.png"></a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="grid-img-box-md">
-              <a href="#"><img src="assets/images/2.png"></a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="grid-img-box-md">
-              <a href="#"><img src="assets/images/3.png"></a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="grid-img-box-md">
-              <a href="#"><img src="assets/images/favicon.png"></a>
-            </div>
+          <div class="col-md-12">
+            
+            <ul class="list-unstyled collapseli">
+
+                  <li>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> Check me out
+                      </label>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> Check me out
+                      </label>
+                    </div>
+                  </li>
+
+
+                  <li>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> Check me out
+                      </label>
+                    </div>
+                  </li>
+
+                 <li>
+                   <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                        Option one
+                      </label>
+                    </div>
+                 </li>
+                 <li>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                        Option two
+                      </label>
+                    </div>
+                 </li>
+                 <li>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                        Option three
+                      </label>
+                    </div>
+                 </li>
+                 <li>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
+                        Option four
+                      </label>
+                    </div>
+                 </li>
+                 <li>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios5" value="option5">
+                        Option five
+                      </label>
+                    </div>       
+                 </li>
+                 <li>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios6" value="option6">
+                        Option six
+                      </label>
+                    </div>       
+                 </li>
+                 <li>
+                      <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios7" value="option7">
+                        Option seven
+                      </label>
+                    </div>
+                 </li>
+                 <li>
+                      <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios8" value="option8">
+                        Option eight
+                      </label>
+                    </div>
+                 </li>
+                 <li>
+                      <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios9" value="option9">
+                        Option nine
+                      </label>
+                    </div>
+                 </li>
+                 <li>
+                      <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios10" value="option10">
+                        Option ten
+                      </label>
+                    </div>
+                 </li>
+            </ul>
           </div>
         </div>
-
-        <h3>Large Grid</h3>
-
-        <div class="row">
-          <div class="col-md-6">
-            <div class="grid-img-box-lg">
-              <a href="#"><img src="assets/images/1.png"></a>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="grid-img-box-lg">
-              <a href="#"><img src="assets/images/2.png"></a>
-            </div>
-          </div>
-        </div>
-
-        <h3>Table / Table Cell Method</h3>
-
-        <div class="row">
-          <div class="col-md-3">
-            <div class="grid-tbl">
-              <div class="grid-tbl-cell">
-                <a href="#"><img src="assets/images/1.png"></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="grid-tbl">
-              <div class="grid-tbl-cell">
-                <a href="#"><img src="assets/images/2.png"></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="grid-tbl">
-              <div class="grid-tbl-cell">
-                <a href="#"><img src="assets/images/3.png"></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="grid-tbl">
-              <div class="grid-tbl-cell">
-                <a href="#"><img src="assets/images/favicon.png"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
 
     </div>
-
-    <div class="clear40"></div>
 
 
     <footer class="footer">
       <div class="container">
-        <p class="text-muted text-center">Copyrights &copy;<span id="yearJS"></span> <a href="#">SiteName</a>. All Rights Reserved.</p>
+        <p class="text-muted text-center">Copyrights &copy;<span id="yearJS"></span> <a href="#">SiteName</a>. 
+        All Rights Reserved.</p>
       </div>
     </footer>
 
@@ -254,6 +285,25 @@
     <script src="assets/scripts/jquery.flexslider-min.js"></script>
     <script src="assets/scripts/owl.carousel.min.js"></script>
     <script src="assets/scripts/custom.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $('ul.collapseli').wrap('<div class="collapseWrapper">');
+        $('div.collapseWrapper').css({ 'height' : '120px' }).after('<a href="#" class="collapseMore">Show More</a>');
+         
+        $('a.collapseMore').click(function () {
+            if ($(this).hasClass('expanded')) {
+                $(this).prev().animate({ height: '120px' }, 500);
+                $(this).text('Show More').removeClass('expanded');
+            }
+            else {
+                $(this).prev().animate({ height: $(this).prev().find('ul.collapseli').outerHeight(true) }, 500);
+                $(this).text('Show Less').addClass('expanded');
+            }
+            return false;
+        });
+    });
+    </script>
 
   </body>
 </html>

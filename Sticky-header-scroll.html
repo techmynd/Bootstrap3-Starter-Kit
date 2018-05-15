@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 
-    <title>Products Grid</title>
+    <title>Sticky Header - Custom</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -23,6 +23,11 @@
     <link href="assets/styles/animate.css" rel="stylesheet">
     <link href="assets/styles/custom.css" rel="stylesheet">
     <link href="assets/styles/responsive.css" rel="stylesheet">
+
+    <style type="text/css">
+      .header {background-color:#ccc; height:200px;}
+      .sticky {position: fixed; left: 0; right: 0; top: 50px;}
+    </style>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -88,23 +93,23 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
+            <li class="dropdown active">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Concepts <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="full-width-bg.html">Full Width BG</a></li>
                 <li><a href="siblings-class.html">Class Toggle, Siblings, Childs</a></li>
                 <li><a href="cloning.html">Cloning</a></li>
                 <li><a href="show-li.html">Show Hide lis</a></li>
-                <li><a href="Sticky-header-scroll.html">Sticky Header After Scroll</a></li>
+                <li class="active"><a href="Sticky-header-scroll.html">Sticky Header After Scroll</a></li>
                 <li><a href="switch-sides.html">Sides Switch</a></li>
               </ul>
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown active">
+            <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Components <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li class="active"><a href="products-grid.html">Products Grid</a></li>
+                <li><a href="products-grid.html">Products Grid</a></li>
                 <li><a href="forms.html">Form</a></li>
                 <li><a href="fontawesome.html">Fontawesome</a></li>
                 <li><a href="txt-effects.html">Text Effects</a></li>
@@ -130,113 +135,26 @@
 
     <div class="container">
         
-        <h2>Products Grid</h2>
+        <h2>Custom Sticky Header</h2>
 
-        <p>Products grid aims to contain product images in a completely responsive wrapper that adjusts width height of image according to the wrapper.</p>
-
-        <h3>Small Grid</h3>
-        
-        <div class="row">
-          <div class="col-md-3">
-            <div class="grid-img-box-sm">
-              <a href="#"><img src="assets/images/1.png"></a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="grid-img-box-sm">
-              <a href="#"><img src="assets/images/2.png"></a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="grid-img-box-sm">
-              <a href="#"><img src="assets/images/3.png"></a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="grid-img-box-sm">
-              <a href="#"><img src="assets/images/favicon.png"></a>
-            </div>
-          </div>
-        </div>
-
-        <h3>Medium Grid</h3>
-
-        <div class="row">
-          <div class="col-md-3">
-            <div class="grid-img-box-md">
-              <a href="#"><img src="assets/images/1.png"></a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="grid-img-box-md">
-              <a href="#"><img src="assets/images/2.png"></a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="grid-img-box-md">
-              <a href="#"><img src="assets/images/3.png"></a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="grid-img-box-md">
-              <a href="#"><img src="assets/images/favicon.png"></a>
-            </div>
-          </div>
-        </div>
-
-        <h3>Large Grid</h3>
-
-        <div class="row">
-          <div class="col-md-6">
-            <div class="grid-img-box-lg">
-              <a href="#"><img src="assets/images/1.png"></a>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="grid-img-box-lg">
-              <a href="#"><img src="assets/images/2.png"></a>
-            </div>
-          </div>
-        </div>
-
-        <h3>Table / Table Cell Method</h3>
-
-        <div class="row">
-          <div class="col-md-3">
-            <div class="grid-tbl">
-              <div class="grid-tbl-cell">
-                <a href="#"><img src="assets/images/1.png"></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="grid-tbl">
-              <div class="grid-tbl-cell">
-                <a href="#"><img src="assets/images/2.png"></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="grid-tbl">
-              <div class="grid-tbl-cell">
-                <a href="#"><img src="assets/images/3.png"></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="grid-tbl">
-              <div class="grid-tbl-cell">
-                <a href="#"><img src="assets/images/favicon.png"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
+        <p>Add remove class on header if user scrolls down to make it sticky.</p>
 
     </div>
 
-    <div class="clear40"></div>
+        <div class="header"></div>
+
+        <div class="clear20"></div>
+
+    <div class="container">    
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint at vitae recusandae aliquid voluptatem amet repellendus, dolore, fugit eius minus totam necessitatibus eligendi asperiores, aut ut dolor ipsam cumque itaque placeat ipsa ullam. Minima praesentium nulla expedita mollitia minus laudantium recusandae voluptas repellendus consequatur veritatis, omnis dolorum soluta inventore qui odio dignissimos eos placeat tempore voluptate molestias natus laboriosam voluptatem ipsam ducimus culpa! Temporibus iusto praesentium, aliquam assumenda. Incidunt, tenetur, commodi. Animi totam iure, suscipit id commodi cupiditate odit similique amet omnis ut illum, tempora, aliquam quia molestiae quidem deleniti dolor magnam possimus. Voluptates, cumque, fugiat! Nulla eligendi minima molestiae accusamus fugit labore, delectus perferendis quis adipisci, laudantium minus sapiente vero necessitatibus magnam, dolorum enim non beatae, doloribus quae totam consectetur excepturi illum velit alias. Ut ullam fugiat distinctio tenetur, voluptate esse ab laudantium eligendi porro. Dolorem, dolore voluptatibus. Blanditiis itaque modi perferendis eaque quaerat culpa iusto amet eveniet, aliquam ut autem quia nam qui ullam, obcaecati. Voluptate est aspernatur, molestias minima consequuntur accusamus nam, dolores. Architecto expedita eum repellendus amet eius veritatis neque quaerat quam dolorem deserunt. Quasi pariatur nisi, inventore harum mollitia vel magnam rem sit deleniti sapiente quos. Possimus quis sed suscipit dicta optio odio delectus obcaecati!</p>
+
+        <p>There are two more header related examples. One changes header height by switching classes and on scroll down, header becomes small in height. <a href="assets/downloads/header-examples.zip">Download Examples</a></p>
+
+        <div style="height:2000px;"></div>
+
+
+    </div>
 
 
     <footer class="footer">
@@ -254,6 +172,24 @@
     <script src="assets/scripts/jquery.flexslider-min.js"></script>
     <script src="assets/scripts/owl.carousel.min.js"></script>
     <script src="assets/scripts/custom.js"></script>
+
+    <script>
+       $(window).scroll(function() {
+           // 143px distance from top - 50px padding of wrapper = 93px header distance from top
+           if($(window).scrollTop() >= 93)
+           {
+            $('.header').addClass("sticky");
+            // in case you need to cancel out top gap when header goes fixed position
+            $(document.body).css('padding-top', '170px');
+           } 
+           else 
+           {
+            $('.header').removeClass("sticky");
+            $(document.body).css('padding-top', '0px');
+           }
+        });   
+    </script>
+
 
   </body>
 </html>

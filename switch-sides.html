@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 
-    <title>Products Grid</title>
+    <title>Switch Sides</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -88,7 +88,7 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
+            <li class="dropdown active">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Concepts <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="full-width-bg.html">Full Width BG</a></li>
@@ -96,15 +96,15 @@
                 <li><a href="cloning.html">Cloning</a></li>
                 <li><a href="show-li.html">Show Hide lis</a></li>
                 <li><a href="Sticky-header-scroll.html">Sticky Header After Scroll</a></li>
-                <li><a href="switch-sides.html">Sides Switch</a></li>
+                <li class="active"><a href="switch-sides.html">Sides Switch</a></li>
               </ul>
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown active">
+            <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Components <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li class="active"><a href="products-grid.html">Products Grid</a></li>
+                <li><a href="products-grid.html">Products Grid</a></li>
                 <li><a href="forms.html">Form</a></li>
                 <li><a href="fontawesome.html">Fontawesome</a></li>
                 <li><a href="txt-effects.html">Text Effects</a></li>
@@ -130,113 +130,43 @@
 
     <div class="container">
         
-        <h2>Products Grid</h2>
+      <h2>Switch Sides or Divs Position for Small Devices</h2>
 
-        <p>Products grid aims to contain product images in a completely responsive wrapper that adjusts width height of image according to the wrapper.</p>
+      <div class="row">
 
-        <h3>Small Grid</h3>
-        
-        <div class="row">
-          <div class="col-md-3">
-            <div class="grid-img-box-sm">
-              <a href="#"><img src="assets/images/1.png"></a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="grid-img-box-sm">
-              <a href="#"><img src="assets/images/2.png"></a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="grid-img-box-sm">
-              <a href="#"><img src="assets/images/3.png"></a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="grid-img-box-sm">
-              <a href="#"><img src="assets/images/favicon.png"></a>
-            </div>
-          </div>
+      <div class="col-md-12">
+        <strong>If I want to shift the rightside div before leftside div on small devices, how would i do it via jquery?</strong>
+      </div>
+
+      <br><br>
+
+      <div class="col-md-12"><strong>Explanation:</strong> If the screen width or device width will be less than 1023px the rightside div will switch to left side and leftsidediv will switch to right. It has two conditions script check on document.ready (page completes loading) and takes the action if necessary and script checks if window is resized and takes action if necessary.<br><br>
+      <p>Achieved by using <pre>$(".right-side").insertBefore(".left-side");</pre></p>
+      <p>This needs a check of if screen width is less than 991px (tablet) and also a second check on window resize. A better Window resize check can be found at <a href="sliding-div-3.html">third example of sliding div</a>.</p>
+      </div>
+
+        <div class="col-md-2 left-side">
+          <h3>Left Side</h3>
+          <ul class="list-unstyled">
+            <li>Some text or link</li>
+            <li>Some text or link</li>
+            <li>Some text or link</li>
+            <li>Some text or link</li>
+            <li>Some text or link</li>
+            <li>Some text or link</li>
+            <li>Some text or link</li>
+            <li>Some text or link</li>
+          </ul>
         </div>
 
-        <h3>Medium Grid</h3>
-
-        <div class="row">
-          <div class="col-md-3">
-            <div class="grid-img-box-md">
-              <a href="#"><img src="assets/images/1.png"></a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="grid-img-box-md">
-              <a href="#"><img src="assets/images/2.png"></a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="grid-img-box-md">
-              <a href="#"><img src="assets/images/3.png"></a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="grid-img-box-md">
-              <a href="#"><img src="assets/images/favicon.png"></a>
-            </div>
-          </div>
+        <div class="col-md-10 right-side">
+            <h3>Right Side</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, aut labore corporis laborum illo facere officia! Illum aspernatur corporis deserunt repellendus ad omnis nisi, voluptatibus vel, numquam magni facere ratione. Quisquam temporibus deserunt iure cumque maxime molestiae dicta veritatis laboriosam pariatur amet maiores quam optio quod, nesciunt, consequuntur error laudantium esse nihil, corrupti? Aliquam minima assumenda, ducimus molestiae temporibus quae sed necessitatibus obcaecati, possimus culpa atque. Aliquam totam corrupti, ut, nostrum et ab eveniet maiores molestiae iste molestias deserunt sapiente architecto asperiores modi error accusantium doloribus facilis distinctio earum ea quis quo consequatur. Placeat dignissimos mollitia, ipsam quos deserunt commodi earum iste, unde excepturi officia, neque aspernatur! Atque dicta, optio excepturi quae obcaecati vero repellat in! Expedita fugiat alias quia quam, dolorem praesentium repellendus officia vero error, iure laborum iusto eaque adipisci, nam. Libero, at. Nostrum laudantium voluptas aspernatur voluptate aliquam iste ab qui eius voluptatum et rem aperiam, totam unde, dolores, sequi pariatur provident. Ipsam quibusdam corrupti ipsa. Incidunt, ex cum non aspernatur quibusdam suscipit, odio minima exercitationem fuga. In nesciunt rerum harum mollitia nihil eos nulla earum, officia quod, alias id sequi perferendis facere eligendi beatae debitis, commodi nisi, aliquam aliquid expedita cumque. Natus laborum alias aperiam culpa.</p>
         </div>
 
-        <h3>Large Grid</h3>
-
-        <div class="row">
-          <div class="col-md-6">
-            <div class="grid-img-box-lg">
-              <a href="#"><img src="assets/images/1.png"></a>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="grid-img-box-lg">
-              <a href="#"><img src="assets/images/2.png"></a>
-            </div>
-          </div>
-        </div>
-
-        <h3>Table / Table Cell Method</h3>
-
-        <div class="row">
-          <div class="col-md-3">
-            <div class="grid-tbl">
-              <div class="grid-tbl-cell">
-                <a href="#"><img src="assets/images/1.png"></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="grid-tbl">
-              <div class="grid-tbl-cell">
-                <a href="#"><img src="assets/images/2.png"></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="grid-tbl">
-              <div class="grid-tbl-cell">
-                <a href="#"><img src="assets/images/3.png"></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="grid-tbl">
-              <div class="grid-tbl-cell">
-                <a href="#"><img src="assets/images/favicon.png"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
+     </div>        
 
     </div>
-
-    <div class="clear40"></div>
 
 
     <footer class="footer">
@@ -254,6 +184,28 @@
     <script src="assets/scripts/jquery.flexslider-min.js"></script>
     <script src="assets/scripts/owl.carousel.min.js"></script>
     <script src="assets/scripts/custom.js"></script>
+
+    <script>
+    $( document ).ready(function() {
+      // check when pages finishes loading
+          if($(window).width() <= 1023) {
+             $(".right-side").insertBefore(".left-side");
+          }
+          else {
+             $(".left-side").insertBefore(".right-side");
+          }
+    });
+    // check if page/ window is being resized manually
+    $(window).on('resize', function() {
+         if($(window).width() <= 1023) { 
+          $(".right-side").insertBefore(".left-side");
+         }
+         else
+         {
+          $(".left-side").insertBefore(".right-side");
+         }
+    });  
+   </script>
 
   </body>
 </html>
