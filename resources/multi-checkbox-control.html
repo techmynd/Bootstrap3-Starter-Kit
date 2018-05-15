@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Template</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<style>
+
+</style>
+
+
+
+
+  </head>
+  <body>
+
+<br><br>
+
+<div class="container">
+
+<strong>Multiple CHeckbox COntrol</strong>
+
+<br><br>
+
+<table id='mytable'>
+    <tbody>
+   <tr>
+     <td>
+       <input name="Room3" id="Room3" class="checkall" type="checkbox" />
+       <label for="Room3">Room 3</label>
+     </td>
+     <td>
+       <input class='Room3' name="Room3Mach310" id="Room3Mach310" type="checkbox" />
+       <label for="Room3Mach310">310</label>
+     </td>
+     <td>
+       <input class='Room3' name="Room3Mach320" id="Room3Mach320" type="checkbox" />
+       <label for="Room3Mach320">320</label>
+     </td>
+     <td>
+       <input class='Room3' name="Room3Mach340" id="Room3Mach340" type="checkbox" />
+       <label for="Room3Mach340">340</label>
+     </td>
+     <td>
+       <input class='Room3' name="Room3Mach350" id="Room3Mach350" type="checkbox" />
+       <label for="Room3Mach350">350</label>
+     </td>
+   </tr>
+   <tr>
+     <td>
+       <input name="Room8" id="Room8" class="checkall" type="checkbox" />
+       <label for="Room8">Room 8</label>
+     </td>
+     <td>
+       <input class='Room8' name="Room8Mach810" id="Room8Mach810" type="checkbox" />
+       <label for="Room8Mach810">810</label>
+     </td>
+     <td>
+       <input class='Room8' name="Room8Mach820" id="Room8Mach820" type="checkbox" />
+       <label for="Room8Mach820">820</label>
+     </td>
+     <td>
+       <input class='Room8' name="Room8Mach840" id="Room8Mach840" type="checkbox" />
+       <label for="Room8Mach840">840</label>
+     </td>
+   </tr>
+   <tr>
+     <td>
+       <input  name="Room10" id="Room10" class="checkall" type="checkbox" />
+       <label for="Room10">Room 10</label>
+     </td>
+     <td>
+       <input class='Room10' name="Room10Mach1010" id="Room10Mach1010" type="checkbox" />
+       <label for="Room10Mach1010">1010</label>
+     </td>
+     <td>
+       <input class='Room10' name="Room10Mach1020" id="Room10Mach1020" type="checkbox" />
+       <label for="Room10Mach1020">1020</label>
+     </td>
+   </tr>
+</tbody>
+</table>
+
+
+
+</div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<script>
+    $('#mytable').on('click','.checkall',function(){
+         $('input.'+this.id).prop('checked',this.checked);
+    });
+</script>
+    
+  </body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search Panel</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<script>
+$(document).ready(function() {
+   
+	// by default hide min max and their wrapers
+   $('.list-right').hide();
+   $('.list-left').hide();
+   $(".price-panel-drop-container").hide();
+   $(".wrapper-price-panel-drop").hide();
+
+	// on outside click hide min max and their wrapers
+	$('.black-overlay').click(function() {
+	   $('.list-right').hide();
+	   $('.list-left').hide();
+	   $(".price-panel-drop-container").hide();
+	   $(".wrapper-price-panel-drop").hide();
+	});
+
+	// on price range main input click show left list and min but hide right list and max
+   $('.price-range').click(function() {
+   		$(".wrapper-price-panel-drop").show();
+   		$(".price-panel-drop-container").show();
+   		$('.list-left').show();
+   		$('.list-right').hide();
+
+   		$(".trigger-max").prop('disabled', true);
+	});
+
+   // on click min hide max
+   $('.trigger-min').click(function() {
+		$('.list-left').show();
+		$('.list-right').hide();   	
+   });
+
+   // on click max hide min
+   $('.trigger-max').click(function() {
+		$('.list-right').show();
+		$('.list-left').hide();   	
+   });
+
+   // on select min price set value in min and main price range / hide left list and show right list and enable max
+   $(".list-left li").on("click", function(){
+    var $this = $(this).data("value");
+    $(".trigger-min").val($this);
+    $(".price-range").val($this);
+    $(".list-left").hide();
+    $(".list-right").show();
+
+    $(".trigger-max").prop('disabled', false);
+
+   });
+
+   // on select max price append value in max and main price range / hide right list and left list and wrapper and disable max
+   $(".list-right li").on("click", function(){
+    var $this = $(this).data("value");
+    $(".trigger-max").val($this);
+
+    $(".price-range").val($('.price-range').val() + ' - ' + $this );
+
+    $(".list-right").hide();
+    $(".price-panel-drop-container").hide();
+    $(".wrapper-price-panel-drop").hide();
+
+    $(".trigger-max").prop('disabled', true);
+    
+   });
+
+
+});
+</script>
+
+
+<style>
+	.relative { position: relative; }
+	.wrapper-price-panel-drop { background-color: #fff; border: 1px solid #ccc; width: 251px; height: auto; position: absolute; z-index: 100; top: 45px; }
+	
+	.price-panel-drop-container { width: 100%; background-color: #eaf0ff; border-bottom: 1px solid #ccc; }
+	
+	.price-panel-drop-left { float: left; width: 49%; padding: 10px 5px 10px 10px; }
+	.price-panel-drop-right { float: right; width: 49%; padding: 10px 10px 10px 5px; }
+	.price-panel-drop-container .form-control { width: 100% !important; display: inline-block !important; }
+
+	.list-left { text-align: left; }
+	.list-right { text-align: right; }
+	.list-left li, .list-right li { padding: 6px 16px; font-weight:bold; }
+	.list-left li:hover, .list-right li:hover { background-color: #eaf0ff; color: #487fd6; cursor: pointer; }
+
+	.wrapper-search-panel { background:url(bg.jpg) no-repeat; background-size: cover; background-position: 50% 50%; overflow: hidden; position: relative; }
+	.wrapper-search-panel .black-overlay { width: 100%; height: 100%; left: 0; right: 0; top: 0; bottom: 0; position: absolute; background:rgba(0,0,0,0.8); z-index: 1; }
+	.wrapper-search-panel .container { margin-top: 300px; margin-bottom: 300px; position: static; z-index: 3; }
+	.search-container:after { font-family: FontAwesome; content: "\f0d7"; color: #000; font-size: 18px; 
+	display: inline-block; position: absolute; top: 12px; left: 484px;z-index: 10; }
+</style>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+
+
+
+
+
+<div class="wrapper-search-panel clearfix">
+
+	<div class="black-overlay"></div>
+
+	<div class="container text-center">
+		
+	<form class="form-inline">
+
+		<div class="input-group search-container">
+		  <input type="text" class="form-control input-lg" placeholder="Search Product" style="border-radius:0;">
+		  <span class="input-group-addon" style="border-left: 0; border-right: 0; width:0px; padding:0px;"></span>
+		  
+		  <input class="form-control input-lg price-range" placeholder="Price Range" style="margin-left:-1px;" value="">
+
+		  <div class="wrapper-price-panel-drop">
+			
+			<div class="price-panel-drop-container clearfix">
+				<div class="price-panel-drop-left">
+					<input class="form-control trigger-min" placeholder="Min">
+				</div>
+				<div class="price-panel-drop-right">
+					<input class="form-control trigger-max"  placeholder="Max">
+				</div>
+			</div>
+
+			<ul class="list-unstyled list-left">
+				<li data-value="$10">$10</li>
+				<li data-value="$20">$20</li>
+				<li data-value="$30">$30</li>
+				<li data-value="$40">$40</li>
+				<li data-value="$50">$50</li>
+				<li data-value="$60">$60</li>
+			</ul>
+
+			<ul class="list-unstyled list-right">
+				<li data-value="$70">$70</li>
+				<li data-value="$80">$80</li>
+				<li data-value="$90">$90</li>
+				<li data-value="$100">$100</li>
+				<li data-value="$150">$150</li>
+				<li data-value="$200">$200</li>
+			</ul>
+
+		  </div>
+
+		  <div class="input-group-btn">
+		        <button type="button" class="btn btn-primary btn-lg" style="border-radius:0; background-image:none;"><i class="fa fa-search fa-fw"></i> SEARCH</button>
+		  </div>
+		</div>
+
+	</form>
+
+	</div>
+
+</div>
+
+
+
+
+
+
+  </body>
+</html>

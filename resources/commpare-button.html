@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+
+<script>
+$(document).ready(function(){
+	$('.cmp-btn .btn').on('click', function(event){
+		event.preventDefault();
+		// closest will work when u want to find an outer class then (this)
+		// $(this).closest('.toggleable').find('.toggleable .fa').stop().toggle();
+		$(this).find('.toggleable').find('i').toggle();
+	});
+});
+</script>
+
+</head>
+
+<body style="padding:100px;">
+
+
+
+
+<div class="text-center cmp-btn">
+	<button class="btn btn-default">COMPARE <span class="toggleable"><i class="fa fa-times fa-fw"></i></span></button>
+</div>
+
+
+
+<div class="text-center cmp-btn">
+	<button class="btn btn-default">COMPARE <span class="toggleable"><i class="fa fa-times fa-fw"></i></span></button>
+</div>
+
+
+
+
+<div class="text-center cmp-btn">
+	<button class="btn btn-default">COMPARE <span class="toggleable"><i class="fa fa-times fa-fw"></i></span></button>
+</div>
+
+
+
+
+<div class="text-center cmp-btn">
+	<button class="btn btn-default">COMPARE <span class="toggleable"><i class="fa fa-times fa-fw"></i></span></button>
+</div>
+
+
+
+
+</body>
+</html>

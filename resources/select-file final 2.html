@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Input Fields Test</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<style type="text/css">
+	.fb-wrapper { position: relative; display: inline-block; }
+	.select-area { display: inline-block; border: 1px dashed #ced4d9; background-color: #f4f4f4; width: 80px; height: 70px; margin: 6px 4px; text-align: center; vertical-align: middle; 
+		cursor: pointer; position: relative; }
+	.select-area .add { display: inline-block; width: 25px; height: 25px; border-radius: 25px; background-color: #2965be; text-align: center; vertical-align: middle; margin-top: 21px; }
+	.select-area .add .fa { color: #fff; margin-top: 6px; display: inline-block; }
+	.select-area:hover { background-color: #f2f2f2; }
+	.select-area:hover .add { background-color: #447ed3; }
+	.file-container { position: absolute; width: 78px; height: 68px; left: 0; top: 0; z-index: 999; text-align: center; vertical-align: middle; line-height: 68px; display: flex; align-items: center; }
+	.file-container img { max-height:68px; margin:auto !important; vertical-align:middle; display:inline-block; }
+	.fc1,.fc2,.fc3,.fc4,.fc5,.fc6,.fc7,.fc8,.close-fc1,.close-fc2,.close-fc3,.close-fc4,.close-fc5,.close-fc6,.close-fc7,.close-fc8 { background-color: #fff; display: none; height: 68px; }
+	#file1, #file2, #file3, #file4, #file5, #file6, #file7, #file8 { display: none; }
+	
+	.closeImg { position: absolute; z-index: 99999; right: -2px; top: -2px; width: 19px; height: 19px; border-radius: 20px; background-color: #2965be; text-align: center; vertical-align: top; cursor: pointer; }
+	.closeImg .fa { color: #fff; margin-top: 0px; display: inline-block; position: absolute; z-index: 9999; top: 2px; right: 0px }
+	.closeImg:hover { background-color: #447ed3; }
+	
+	.fallbackInputs { display: none; }
+	.dynamic input { display: inline-block; margin-left: 10px; }
+
+	.remove { background-color: #2965be; display: inline-block; width: auto; height: 38px; border-radius: 6px; 
+	cursor: pointer; color: #fff; border: none; padding: 10px 12px 6px 12px; }
+	.custom-File { display: inline-block; }
+	.custom-File label { background-color: #2965be; display: inline-block; width: auto; height: 38px; border-radius: 6px; position: relative; 
+	cursor: pointer; color: #fff; border: none; padding: 10px 12px 6px 12px;
+	}
+	.custom-File input { opacity: 0; filter: alpha(opacity=0); z-index: -1; visibility: hidden; position: absolute; }
+	.custom-File .fa { text-shadow:none; }
+	.addFiles { margin-left: 12px; cursor: pointer; }
+	.addFiles .fa { margin-right: 6px; }
+	.fa { font-weight: 100; text-shadow:none; }
+	
+</style>
+
+<script type="text/javascript">
+
+$(document).ready( function() {
+
+
+	function setName(data){
+//	console.log("dfdgdfgd");
+}
+
+  $('.file1').click(function(){$("#file1").click();});
+  $('.file2').click(function(){$("#file2").click();});
+  $('.file3').click(function(){$("#file3").click();});
+  $('.file4').click(function(){$("#file4").click();});
+  $('.file5').click(function(){$("#file5").click();});
+  $('.file6').click(function(){$("#file6").click();});
+  $('.file7').click(function(){$("#file7").click();});
+  $('.file8').click(function(){$("#file8").click();});
+
+  $('.close-fc1').click(function(){
+	$("#file1").val('');
+	//$("#file1").trigger('reset');
+  	$('.fc1 img').attr('src','');
+  	$(".fc1").hide();
+  	$(".close-fc1").hide();
+  });
+
+  $('.close-fc2').click(function(){
+	$("#file2").val('');
+  	$('.fc2 img').attr('src','');
+  	$(".fc2").hide();
+  	$(".close-fc2").hide();
+  });
+
+  $('.close-fc3').click(function(){
+	$("#file3").val('');
+  	$('.fc3 img').attr('src','');
+  	$(".fc3").hide();
+  	$(".close-fc3").hide();
+  });
+
+  $('.close-fc4').click(function(){
+	$("#file4").val('');
+  	$('.fc4 img').attr('src','');
+  	$(".fc4").hide();
+  	$(".close-fc4").hide();
+  });
+
+  $('.close-fc5').click(function(){
+	$("#file5").val('');
+  	$('.fc5 img').attr('src','');
+  	$(".fc5").hide();
+  	$(".close-fc5").hide();
+  });
+
+  $('.close-fc6').click(function(){
+	$("#file6").val('');
+  	$('.fc6 img').attr('src','');
+  	$(".fc6").hide();
+  	$(".close-fc6").hide();
+  });
+
+  $('.close-fc7').click(function(){
+	$("#file7").val('');
+  	$('.fc7 img').attr('src','');
+  	$(".fc7").hide();
+  	$(".close-fc7").hide();
+  });
+
+  $('.close-fc8').click(function(){
+	$("#file8").val('');
+  	$('.fc8 img').attr('src','');
+  	$(".fc8").hide();
+  	$(".close-fc8").hide();
+  });
+  
+
+	$('#file1').change(function(){
+		$('.fc1').show();
+		$('.close-fc1').show();
+	  if (this.files && this.files[0]) {
+	    var reader = new FileReader();
+	    reader.onload = function (e) {
+	        selectedImage = e.target.result;
+	        $('.fc1 img').attr('src', selectedImage);
+	    };
+	    reader.readAsDataURL(this.files[0]);
+	  }
+	});
+
+	$('#file2').change(function(){
+	$('.fc2').show();
+	$('.close-fc2').show();
+  if (this.files && this.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        selectedImage = e.target.result;
+        $('.fc2 img').attr('src', selectedImage);
+    };
+    reader.readAsDataURL(this.files[0]);
+	  }
+	});
+
+	$('#file3').change(function(){
+	$('.fc3').show();
+	$('.close-fc3').show();
+  if (this.files && this.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        selectedImage = e.target.result;
+        $('.fc3 img').attr('src', selectedImage);
+    };
+    reader.readAsDataURL(this.files[0]);
+	  }
+	});
+
+	$('#file4').change(function(){
+	$('.fc4').show();
+	$('.close-fc4').show();
+  if (this.files && this.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        selectedImage = e.target.result;
+        $('.fc4 img').attr('src', selectedImage);
+    };
+    reader.readAsDataURL(this.files[0]);
+	  }
+	});
+
+	$('#file5').change(function(){
+	$('.fc5').show();
+	$('.close-fc5').show();
+  if (this.files && this.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        selectedImage = e.target.result;
+        $('.fc5 img').attr('src', selectedImage);
+    };
+    reader.readAsDataURL(this.files[0]);
+	  }
+	});
+
+	$('#file6').change(function(){
+	$('.fc6').show();
+	$('.close-fc6').show();
+  if (this.files && this.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        selectedImage = e.target.result;
+        $('.fc6 img').attr('src', selectedImage);
+    };
+    reader.readAsDataURL(this.files[0]);
+	  }
+	});
+
+	$('#file7').change(function(){
+	$('.fc7').show();
+	$('.close-fc7').show();
+  if (this.files && this.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        selectedImage = e.target.result;
+        $('.fc7 img').attr('src', selectedImage);
+    };
+    reader.readAsDataURL(this.files[0]);
+	  }
+	});
+
+	$('#file8').change(function(){
+	$('.fc8').show();
+	$('.close-fc8').show();
+  if (this.files && this.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        selectedImage = e.target.result;
+        $('.fc8 img').attr('src', selectedImage);
+    };
+    reader.readAsDataURL(this.files[0]);
+	  }
+	});
+
+
+// FALLBACK for safari and IE
+
+// IE Check
+    var ms_ie = false;
+    var ua = window.navigator.userAgent;
+    var old_ie = ua.indexOf('MSIE ');
+    var new_ie = ua.indexOf('Trident/');
+
+    if ((old_ie > -1) || (new_ie > -1)) {
+        ms_ie = true;
+    }
+
+    if ( ms_ie ) {
+        //IE specific code goes here
+    //    alert('Its IE');
+      $(".originalInputs").hide();
+      $(".fallbackInputs").show();
+    }
+
+// Safari Check
+if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+	//alert('Its Safari');
+	$(".originalInputs").hide();
+    $(".fallbackInputs").show();
+    
+}
+
+
+// add fallback inputs
+$('.addFiles').click(function() {
+
+	var numItems = $('.dynamic').length;
+	if (numItems < 9 ) {
+ 
+    $('.dynamic:last').before('<div class="form-group dynamic"><span class="remove"><i class="fa fa-minus fa-lg"></i></span> <div class="custom-File"><label><input type="file" name="uploadFile[]" class="form-control singleFallBack" accept="image/*" onChange="newB(this);"><i class="fa fa-camera fa-lg"></i> Select Photo</label><span class="thename"></span></div></div>');
+	}
+	else
+	{
+		// alert("maximum files are 8");
+	}
+
+});
+
+   //remove fallback inputs
+	$('.fallbackInputs').on('click','.remove',function() {
+	 	$(this).parent().remove();
+	});
+
+
+	
+});	
+
+
+
+</script>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  </head>
+  <body>
+
+<br><br>
+
+<div class="container originalInputs">
+
+
+<Input type="file" name="uploadFile[]" class="form-control" id="file1" accept="image/*">
+<Input type="file" name="uploadFile[]" class="form-control" id="file2" accept="image/*">
+<Input type="file" name="uploadFile[]" class="form-control" id="file3" accept="image/*">
+<Input type="file" name="uploadFile[]" class="form-control" id="file4" accept="image/*">
+<Input type="file" name="uploadFile[]" class="form-control" id="file5" accept="image/*">
+<Input type="file" name="uploadFile[]" class="form-control" id="file6" accept="image/*">
+<Input type="file" name="uploadFile[]" class="form-control" id="file7" accept="image/*">
+<Input type="file" name="uploadFile[]" class="form-control" id="file8" accept="image/*">
+
+
+
+	<div class="clearfix"></div>
+	<br><br>
+
+
+
+
+	<div class="fb-wrapper">
+		<div class="closeImg close-fc1"><i class="fa fa-times fa-fw"></i></div>	
+		<div class="select-area file1">
+			<div class="file-container fc1">
+				<img src="" class="img-responsive">
+			</div>
+			<div class="add"><i class="fa fa-plus fa-fw"></i></div>
+		</div>
+	</div>
+	
+	<div class="fb-wrapper">
+		<div class="closeImg close-fc2"><i class="fa fa-times fa-fw"></i></div>	
+		<div class="select-area file2">
+			<div class="file-container fc2">
+				<img src="" class="img-responsive">
+			</div>
+			<div class="add"><i class="fa fa-plus fa-fw"></i></div>
+		</div>
+	</div>
+
+	<div class="fb-wrapper">
+		<div class="closeImg close-fc3"><i class="fa fa-times fa-fw"></i></div>	
+		<div class="select-area file3">
+			<div class="file-container fc3">
+				<img src="" class="img-responsive">
+			</div>
+			<div class="add"><i class="fa fa-plus fa-fw"></i></div>
+		</div>
+	</div>
+
+	<div class="fb-wrapper">
+		<div class="closeImg close-fc4"><i class="fa fa-times fa-fw"></i></div>	
+		<div class="select-area file4">
+			<div class="file-container fc4">
+				<img src="" class="img-responsive">
+			</div>
+			<div class="add"><i class="fa fa-plus fa-fw"></i></div>
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	<div class="fb-wrapper">
+		<div class="closeImg close-fc5"><i class="fa fa-times fa-fw"></i></div>	
+		<div class="select-area file5">
+			<div class="file-container fc5">
+				<img src="" class="img-responsive">
+			</div>
+			<div class="add"><i class="fa fa-plus fa-fw"></i></div>
+		</div>
+	</div>
+
+	<div class="fb-wrapper">
+		<div class="closeImg close-fc6"><i class="fa fa-times fa-fw"></i></div>	
+		<div class="select-area file6">
+			<div class="file-container fc6">
+				<img src="" class="img-responsive">
+			</div>
+			<div class="add"><i class="fa fa-plus fa-fw"></i></div>
+		</div>
+	</div>
+
+	<div class="fb-wrapper">
+		<div class="closeImg close-fc7"><i class="fa fa-times fa-fw"></i></div>	
+		<div class="select-area file7">
+			<div class="file-container fc7">
+				<img src="" class="img-responsive">
+			</div>
+			<div class="add"><i class="fa fa-plus fa-fw"></i></div>
+		</div>
+	</div>
+
+	<div class="fb-wrapper">
+		<div class="closeImg close-fc8"><i class="fa fa-times fa-fw"></i></div>	
+		<div class="select-area file8">
+			<div class="file-container fc8">
+				<img src="" class="img-responsive">
+			</div>
+			<div class="add"><i class="fa fa-plus fa-fw"></i></div>
+		</div>
+	</div>
+
+</div>
+
+<br><br><br><br>
+
+
+
+
+
+
+
+<!-- FALL BACK FOR SAFARI AND IE -->
+
+
+<div class="container fallbackInputs">
+
+	<div class="form-group dynamic">
+		<span class="remove"><i class="fa fa-minus fa-lg"></i></span>
+		<div class="custom-File">
+			<label>
+				<input type="file" name="uploadFile[]" class="form-control singleFallBack" accept="image/*" onChange="newB(this);">
+				<i class="fa fa-camera fa-lg"></i>
+				Select Photo
+			</label>
+			<span class="thename"></span>
+		</div>
+	</div>
+
+	<div class="form-group dynamic">
+		<span class="addFiles"><i class="fa fa-plus fa-lg"></i> Add Files</span> 
+	</div>
+
+</div>
+
+<script type="text/javascript">
+	function newB(data){
+	    var filename = $(data).val().split('\\').pop();
+		$(data).closest('.dynamic .custom-File').find('.thename').stop().html(filename);
+	}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
+
+
+
+

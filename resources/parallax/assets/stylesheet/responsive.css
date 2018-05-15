@@ -1,0 +1,43 @@
+@media screen and (min-width: 320px) and (max-width: 479px) {
+.heading { font-size:60px; }
+.blacktxt, .white, .black, .blank { padding:40px 0; }
+.blacktxt .one, .white .one, .black .one, .blank .one { font-size:16px; }
+.blacktxt .two, .white .two, .black .two, .blank .two { font-size:12px; }
+}
+
+@media screen and (min-width: 480px) and (max-width: 639px) {
+.heading { font-size:80px; }
+.blacktxt, .white, .black, .blank { padding:60px 0; }
+.blacktxt .one, .white .one, .black .one, .blank .one { font-size:20px; }
+.blacktxt .two, .white .two, .black .two, .blank .two { font-size:13px; }	
+}
+
+@media screen and (min-width: 640px) and (max-width: 767px) {
+.heading { font-size:100px; }
+.blacktxt, .white, .black, .blank { padding:80px 0; }
+.blacktxt .one, .white .one, .black .one, .blank .one { font-size:22px; }
+.blacktxt .two, .white .two, .black .two, .blank .two { font-size:13px; }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+.heading { font-size:150px; }
+.blacktxt, .white, .black, .blank { padding:140px 0; }
+.blacktxt .one, .white .one, .black .one, .blank .one { font-size:24px; }
+.blacktxt .two, .white .two, .black .two, .blank .two { font-size:13px; }
+}
+
+@media screen and (min-width: 1004px) and (max-width: 1259px) {
+}
+
+@media screen and (min-width: 1260px) and (max-width: 1365px) {
+}
+
+@media screen and (min-width: 1366px) and (max-width: 1679px) {
+}
+
+@media screen and (min-width: 1680px) {
+}
+
+@media screen and (max-width: 320px) {
+	
+}
