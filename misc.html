@@ -174,8 +174,12 @@
           </li>
           <li><a href="resources/loader.html" target="_blank">Site Loader - Show logo first</a></li>
           <li><a href="https://mdbootstrap.com" target="_blank">Material Bootstrap</a></li>
-          https://sass-lang.com/guide
-          http://tether.io/overview/why_you_should_use_tether/
+
+          <li><a href="https://sass-lang.com/guide" target="_blank">Sass Guide</a></li>
+          <li><a href="http://tether.io/overview/why_you_should_use_tether/" target="_blank">Tether JS for tool tips and drop downs</a></li>
+
+          
+          
           
           
           <li>...</li>
@@ -215,6 +219,50 @@ $('.header').removeClass('header-large').addClass("header-small");
 $(document).ready(function(){
 });
 </textarea>
+
+<div class="clear20"></div>
+
+<textarea class="form-control" rows="10">
+// Bootstrap 4 media queries
+// =========================
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width
+
+// Large devices (desktops, less than 75em)
+@media (max-width: 74.9em) { ... }
+ 
+// Medium devices (tablets, less than 62em)
+@media (max-width: 61.9em) { ... }
+ 
+ 
+// Small devices (landscape phones, less than 48em)
+@media (max-width: 47.9em) { ... }
+ 
+ 
+// Extra small devices (portrait phones, less than 34em)
+@media (max-width: 33.9em) { ... }
+</textarea>
+
+<div class="clear20"></div>
+
+<pre>
+rem instead of px
+=================
+Typography font sizing in Bootstrap 4 is done completely based on the rem unit of measurement.
+With rem, all font sizes are relative to the root element (aka, the html tag or body tag).
+So if you inspect element on a Bootstrap 4 page, you'll notice the html tag has font-size: 16px on it. 
+If you wanted your p tags to be that size, you could simply do:
+p {
+ font-size: 1rem;
+}
+Another example: If you want your h1 tags to be be 40px.
+h1 {
+    font-size: 2.5rem;  /* 16  2.5 = 40px */
+    /* 16 comes from 16px from root */
+}
+</pre>
+
 
         <div class="clear20"></div>
 
