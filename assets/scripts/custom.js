@@ -91,6 +91,12 @@ $('.top').click(function () {$('body,html').animate({scrollTop: 0}, 800,'easeInO
 });
 
 
+// stop droppdown to close on clicking inside of it // for example in case of signin dropdowns
+// $(document).on('click', '.dropdown-user', '.dropdown-menu', function (e) {
+//   e.stopPropagation();
+// });
+
+
 /*
 // stick header starts
 $(window).scroll(function() {    
