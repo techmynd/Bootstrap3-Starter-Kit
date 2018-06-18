@@ -4,9 +4,9 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
 
-    <title>Flexslider - Full Screen</title>
+    <title>BG Slider</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -18,6 +18,8 @@
     <link href="assets/styles/owl.carousel.min.css" rel="stylesheet">
     <link href="assets/styles/owl.theme.default.min.css" rel="stylesheet">
     <link href="assets/styles/font-awesome.min.css" rel="stylesheet">
+
+    <link href="assets/styles/vegas-bg-slider.min.css" rel="stylesheet">
 
     <link href="assets/styles/hover-min.css" rel="stylesheet">
     <link href="assets/styles/animate.css" rel="stylesheet">
@@ -31,12 +33,8 @@
 
   </head>
   <body>
-    <!--
-    .sticky-footer sticks footer to bottom
-    .navbar-fixed-top-custom sticks header to top and adds padding from top for content
-    .pg-wrapper is like second body coz we can not apply classes to body - but we can have div with .pg-wrapper in every partial pages that will be called in main index template
-    -->
-    <div class="pg-wrapper sticky-footer navbar-fixed-top-custom transparent-nav">
+
+    <div class="pg-wrapper sticky-footer navbar-fixed-top-custom">
 
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default">
@@ -61,13 +59,12 @@
                 <li><a href="carousel-3.html">Multiple Sliders / images</a></li>
               </ul>
             </li>
-            <li class="dropdown active">
+            <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Flex Slider <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="flexslider-1.html">Single / Random Height / images</a></li>
-                <li class="active"><a href="flexslider-2.html">Single / Screen Height / BGs</a></li>
+                <li><a href="flexslider-2.html">Single / Screen Height / BGs</a></li>
                 <li><a href="flexslider-3.html">Multiple Sliders / images</a></li>
-                <li><a href="flexslider-4.html">Link Based Slider / Two sections</a></li>
               </ul>
             </li>
             <li class="dropdown">
@@ -89,7 +86,7 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
+            <li class="dropdown active">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Concepts <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="full-width-bg.html">Full Width BG</a></li>
@@ -98,15 +95,15 @@
                 <li><a href="show-li.html">Show Hide lis</a></li>
                 <li><a href="Sticky-header-scroll.html">Sticky Header After Scroll</a></li>
                 <li><a href="switch-sides.html">Sides Switch</a></li>
-               <li><a href="equal-height-columns.html">Equal Height Columns</a></li>
-				<li><a href="masonary.html">Masonary Grid</a></li>
-				<li><a href="parallax-1.html">Parallax 1</a></li>
-				<li><a href="parallax-2.html">Parallax 2</a></li>
-				<li><a href="parallax-3.html">Parallax 3</a></li>
-				<li><a href="col-shuffle.html">Columns Shuffle</a></li>
-				<li><a href="bg-slider.html">Background Slider</a></li>
-				<li><a href="v1-slider.html">Vertical Slider - Gallery 1</a></li>
-				<li><a href="v2-slider.html">Vertical Slider - Gallery 2</a></li>
+                <li><a href="equal-height-columns.html">Equal Height Columns</a></li>
+                <li><a href="masonary.html">Masonary Grid</a></li>
+                <li><a href="parallax-1.html">Parallax 1</a></li>
+                <li><a href="parallax-2.html">Parallax 2</a></li>
+                <li><a href="parallax-3.html">Parallax 3</a></li>
+                <li><a href="col-shuffle.html">Columns Shuffle</a></li>
+                <li class="active"><a href="bg-slider.html">Background Slider</a></li>
+                <li><a href="v1-slider.html">Vertical Slider - Gallery 1</a></li>
+                <li><a href="v2-slider.html">Vertical Slider - Gallery 2</a></li>
                 <li><a href="wow-reset.html">WOW Animation Reset</a></li>
               </ul>
             </li>
@@ -139,26 +136,21 @@
       </div>
     </nav>
 
-    <div class="sliderWrap">
-      <div class="flexslider fs-full-screen flex-arrows-space">
-        <ul class="slides">
-          <li style="background-image: url('assets/images/slider-1.jpg');">
-          </li>
-          <li style="background-image: url('assets/images/slider-2.jpg');">
-          </li>
-          <li style="background-image: url('assets/images/slider-3.jpg');">
-          </li>
-        </ul>
-      </div>
+    <div class="container">
+        <h2>Full Screen BG Slider - Cool Animation</h2>
     </div>
 
-    <div class="clear40"></div>
+    <div id="slider" class="vh-wrapper"></div>
+
+
+    <br><br>
+
     <div class="container">
-      <h2>Flex Slider - BGs - Slide or Fade - Full Screen</h2>
-      <p>Use above flexslider for sliding backgrounds. This example uses background images. Flex slider is not good with text in slides unless its just one text over all slides.</p>
-      <p>Use class <strong>show-arrows</strong> with <strong>flexslider</strong> main div, to show permanent arrows.</p>
+        <a href="https://vegas.jaysalvat.com/" target="_blank">Link</a>
     </div>
-    <div class="clear40"></div>
+
+    <br><br>
+
 
     <footer class="footer">
       <div class="container">
@@ -169,50 +161,43 @@
     </div><!--.pg-wrapper ends-->
 
     <script src="assets/scripts/jquery.min.js"></script>
-    <script src="assets/scripts/jquery.easing.js"></script>
     <script src="assets/scripts/bootstrap.min.js"></script>
     <script src="assets/scripts/wow.min.js"></script>
+    <script src="assets/scripts/jquery.easing.js"></script>
     <script src="assets/scripts/jquery.flexslider-min.js"></script>
     <script src="assets/scripts/owl.carousel.min.js"></script>
     <script src="assets/scripts/custom.js"></script>
 
+    <script src="assets/scripts/vegas-bg-slider.min.js"></script>
     <script>
-    $('.flexslider').hide();
     $(document).ready(function(){
-      $('.flexslider').fadeIn('slow');
+          $('#slider').vegas({
+              slide: 0,
+              preload: true,
+              preloadImage: false,
+              preloadVideo: false,
+              delay: 6000,
+              timer: true,
+              overlay: false,
+              autoplay: true,
+              loop: true,
+              shuffle: false,
+              cover: true,
+              align: 'left',
+              valign: 'center',
+              transition: 'fade',
+              transitionDuration: 5000,
+              firstTransition: 'fade',
+              firstTransitionDuration: 5000,
+              animation: 'kenburns',
+              animationDuration: 5000,
+              slides: [
+                  { src: 'assets/images/slider-1.jpg' },
+                  { src: 'assets/images/slider-3.jpg' },
+                  { src: 'assets/images/slider-2.jpg' }
+              ]
+          });
     });
-
-      $(window).load(function() {
-        $('.flexslider').flexslider({
-          animation: "slide",
-          // animation: "fade",
-
-          // easing: "swing",
-          // direction: "vertical", // direction: "horizontal",
-
-          smoothHeight: false,
-          animationSpeed: "600",
-          randomize: false,
-          pauseOnHover: true,
-          useCSS: true,
-          touch: true,
-          keyboard: true,
-
-          // dots
-          controlNav: true,
-          // continuous scroll
-          animationLoop: true,
-
-          // auto loop
-           slideshow: false
-          // slideshowSpeed: "7000",
-          // pausePlay: false,
-
-        });
-      });
-
-
-
     </script>
 
   </body>

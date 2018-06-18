@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
@@ -52,7 +52,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            
+
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Owl Carousel <span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -98,6 +98,16 @@
                 <li><a href="show-li.html">Show Hide lis</a></li>
                 <li><a href="Sticky-header-scroll.html">Sticky Header After Scroll</a></li>
                 <li><a href="switch-sides.html">Sides Switch</a></li>
+               <li><a href="equal-height-columns.html">Equal Height Columns</a></li>
+				<li><a href="masonary.html">Masonary Grid</a></li>
+				<li><a href="parallax-1.html">Parallax 1</a></li>
+				<li><a href="parallax-2.html">Parallax 2</a></li>
+				<li><a href="parallax-3.html">Parallax 3</a></li>
+				<li><a href="col-shuffle.html">Columns Shuffle</a></li>
+				<li><a href="bg-slider.html">Background Slider</a></li>
+				<li><a href="v1-slider.html">Vertical Slider - Gallery 1</a></li>
+				<li><a href="v2-slider.html">Vertical Slider - Gallery 2</a></li>
+                <li><a href="wow-reset.html">WOW Animation Reset</a></li>
               </ul>
             </li>
           </ul>
@@ -196,7 +206,7 @@
         </div>
 
         <div class="col-md-6">
-          
+
           <div class="text-center">
             <div class="sliderWrap overflow-visible">
               <div class="flexslider gallery gallery-1 show-arrows">
@@ -284,11 +294,11 @@
     </div>
 
     <div class="clear80"></div>
-      
+
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            
+
             <h4 class="text-center">Product Gallery With Carousel</h4>
 
             <div class="clear20"></div>
@@ -350,7 +360,7 @@
             <div class="clear20"></div>
 
             <div class="text-center">
-              <div class="sliderWrap overflow-visible">  
+              <div class="sliderWrap overflow-visible">
                 <div id="slider-carousel-thumbs" class="flexslider show-arrows prev-next-enabled left-right-space">
                   <ul class="slides">
                     <li>
@@ -405,7 +415,7 @@
 
           </div>
           <div class="col-md-6">
-            
+
             <h4 class="text-center">Product Gallery Without Carousel / With Thumbnails</h4>
 
             <div class="clear20"></div>
@@ -485,7 +495,7 @@
     $(document).ready(function(){
       $('.flexslider').fadeIn('slow');
     });
-      
+
       $(window).load(function() {
         $('#flex-logos').flexslider({
           animation: "slide",
@@ -494,16 +504,16 @@
           itemMargin: 2,
           minItems: 1,
           maxItems: 6,
-          
+
           // move one item at a time
            move: 1,
            slideshow: 1,
 
           // animation: "fade",
-          
+
           // easing: "swing",
           // direction: "vertical", // direction: "horizontal",
-          
+
           smoothHeight: false,
           //animationSpeed: "600",
           randomize: false,
@@ -516,7 +526,7 @@
           controlNav: true,
           // continuous scroll
           animationLoop: true
-          
+
           // auto loop
            //slideshow: true,
            //slideshowSpeed: "7000"
@@ -532,10 +542,10 @@
         $('.gallery-1').flexslider({
           animation: "slide",
           // animation: "fade",
-          
+
           // easing: "swing",
           // direction: "vertical", // direction: "horizontal",
-          
+
           smoothHeight: true,
           animationSpeed: "600",
           randomize: false,
@@ -548,7 +558,7 @@
           controlNav: true,
           // continuous scroll
           animationLoop: true,
-          
+
           // auto loop
            slideshow: false
           // slideshowSpeed: "7000",
@@ -565,10 +575,10 @@
         $('.gallery-2').flexslider({
           animation: "slide",
           // animation: "fade",
-          
+
           // easing: "swing",
           // direction: "vertical", // direction: "horizontal",
-          
+
           smoothHeight: true,
           animationSpeed: "600",
           randomize: false,
@@ -581,7 +591,7 @@
           controlNav: true,
           // continuous scroll
           animationLoop: true,
-          
+
           // auto loop
            slideshow: false
           // slideshowSpeed: "7000",
@@ -603,7 +613,7 @@
           itemMargin: 2,
           asNavFor: '#synced-slider'
         });
-       
+
         $('#synced-slider').flexslider({
           animation: "slide",
           controlNav: false,
@@ -614,7 +624,7 @@
       });
 
       // Gallery 4 - Product Gallery without Carousel but with thumbnails
-    
+
       $(window).load(function() {
         $('.flex-no-nav').flexslider({
           animation: "slide",
@@ -622,7 +632,7 @@
           controlNav: "thumbnails"
         });
       });
-      
+
     </script>
 
   </body>

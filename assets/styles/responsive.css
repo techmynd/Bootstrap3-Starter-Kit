@@ -16,6 +16,10 @@
 
 	.flex-direction-nav a {margin: -27px 0 0;}
 	.flexslider.gallery {margin-bottom: 50px;}
+
+    .full-right-side {padding-right: 15px;}
+	.full-left-side {padding-left: 15px;}
+
 }
 
 @media all and (max-width:767px) {

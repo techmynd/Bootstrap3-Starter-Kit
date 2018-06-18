@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
 
-    <title>Flexslider - Full Screen</title>
+    <title>Vertical Slider - Gallery 1</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -22,6 +22,67 @@
     <link href="assets/styles/hover-min.css" rel="stylesheet">
     <link href="assets/styles/animate.css" rel="stylesheet">
     <link href="assets/styles/custom.css" rel="stylesheet">
+
+
+    <style>
+    
+    #details-slider-wrap .thumbs a .thumb-wrap {
+        height: 92px;
+        line-height: 92px;
+        display: flex;
+        align-items: center;
+        overflow: visible;
+        vertical-align: middle;
+        text-align: center;
+    }
+    #details-slider-wrap .thumbs a {
+        display: block;
+        margin: 10px;
+    }
+    #details-slider-wrap .thumbs a .thumb-wrap img {
+        max-height: 92px;
+        margin: 0 auto !important;
+        display: inline-block !important;
+        width: auto !important;
+    }
+
+    #details-slider-wrap .product-preview {
+        height: 530px;
+        line-height: 530px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        vertical-align: middle;
+        text-align: center;
+    }
+    #details-slider-wrap .product-preview img {
+        max-height: 530px;
+        margin: 0 auto !important;
+        display: inline-block !important;
+        width: auto !important;
+    }
+
+
+  @media all and (max-width:991px) {
+    #details-slider-wrap .thumbs a {display: inline-block; margin: 0 auto;}
+    .center-middle .thumbs {text-align: center;}
+    #details-slider-wrap .product-preview {height: auto; line-height: normal; display: block;}
+    #details-slider-wrap .product-preview img {max-height: 100%;}
+    .center-middle .col-md-3, 
+    .center-middle .col-md-7, 
+    .center-middle .col-md-6, 
+    .center-middle .col-md-5, 
+    .center-middle .col-md-4, 
+    .center-middle .col-md-2, 
+    .col-flex 
+    {width:100% !important; display: block !important; clear: both !important; float: none; padding: 0 0 20px 0; text-align: center;}
+  }
+
+    </style>
+
+
+
+
     <link href="assets/styles/responsive.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
@@ -31,12 +92,8 @@
 
   </head>
   <body>
-    <!--
-    .sticky-footer sticks footer to bottom
-    .navbar-fixed-top-custom sticks header to top and adds padding from top for content
-    .pg-wrapper is like second body coz we can not apply classes to body - but we can have div with .pg-wrapper in every partial pages that will be called in main index template
-    -->
-    <div class="pg-wrapper sticky-footer navbar-fixed-top-custom transparent-nav">
+
+    <div class="pg-wrapper sticky-footer navbar-fixed-top-custom">
 
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default">
@@ -52,7 +109,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-
+            
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Owl Carousel <span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -61,13 +118,12 @@
                 <li><a href="carousel-3.html">Multiple Sliders / images</a></li>
               </ul>
             </li>
-            <li class="dropdown active">
+            <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Flex Slider <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="flexslider-1.html">Single / Random Height / images</a></li>
-                <li class="active"><a href="flexslider-2.html">Single / Screen Height / BGs</a></li>
+                <li><a href="flexslider-2.html">Single / Screen Height / BGs</a></li>
                 <li><a href="flexslider-3.html">Multiple Sliders / images</a></li>
-                <li><a href="flexslider-4.html">Link Based Slider / Two sections</a></li>
               </ul>
             </li>
             <li class="dropdown">
@@ -89,7 +145,7 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
+            <li class="dropdown active">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Concepts <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="full-width-bg.html">Full Width BG</a></li>
@@ -98,15 +154,15 @@
                 <li><a href="show-li.html">Show Hide lis</a></li>
                 <li><a href="Sticky-header-scroll.html">Sticky Header After Scroll</a></li>
                 <li><a href="switch-sides.html">Sides Switch</a></li>
-               <li><a href="equal-height-columns.html">Equal Height Columns</a></li>
-				<li><a href="masonary.html">Masonary Grid</a></li>
-				<li><a href="parallax-1.html">Parallax 1</a></li>
-				<li><a href="parallax-2.html">Parallax 2</a></li>
-				<li><a href="parallax-3.html">Parallax 3</a></li>
-				<li><a href="col-shuffle.html">Columns Shuffle</a></li>
-				<li><a href="bg-slider.html">Background Slider</a></li>
-				<li><a href="v1-slider.html">Vertical Slider - Gallery 1</a></li>
-				<li><a href="v2-slider.html">Vertical Slider - Gallery 2</a></li>
+                <li><a href="equal-height-columns.html">Equal Height Columns</a></li>
+                <li><a href="masonary.html">Masonary Grid</a></li>
+                <li><a href="parallax-1.html">Parallax 1</a></li>
+                <li><a href="parallax-2.html">Parallax 2</a></li>
+                <li><a href="parallax-3.html">Parallax 3</a></li>
+                <li><a href="col-shuffle.html">Columns Shuffle</a></li>
+                <li><a href="bg-slider.html">Background Slider</a></li>
+                <li class="active"><a href="v1-slider.html">Vertical Slider - Gallery 1</a></li>
+                <li><a href="v2-slider.html">Vertical Slider - Gallery 2</a></li>
                 <li><a href="wow-reset.html">WOW Animation Reset</a></li>
               </ul>
             </li>
@@ -139,26 +195,43 @@
       </div>
     </nav>
 
-    <div class="sliderWrap">
-      <div class="flexslider fs-full-screen flex-arrows-space">
-        <ul class="slides">
-          <li style="background-image: url('assets/images/slider-1.jpg');">
-          </li>
-          <li style="background-image: url('assets/images/slider-2.jpg');">
-          </li>
-          <li style="background-image: url('assets/images/slider-3.jpg');">
-          </li>
-        </ul>
+    <div class="container">
+        
+        <h2>Vertical SLider - Gallery - Static Thumbs</h2>
+
+    <section id="details-slider-wrap">
+      <div class="container-fluid">
+        <div class="row row-flex">
+          
+          <div class="col-md-2 thumbs col-flex">
+            <a href="#" data-thumb="assets/images/slider-1.jpg">
+              <div class="thumb-wrap">
+                <img src="assets/images/img-small-1.jpg" class="img-responsive center-block active">
+              </div>
+            </a>
+            <a href="#" data-thumb="assets/images/slider-3.jpg">
+              <div class="thumb-wrap">
+                <img src="assets/images/img-small-2.jpg" class="img-responsive center-block">
+              </div>
+            </a>
+          </div>
+          
+          <div class="col-md-7 text-center col-flex">
+            <div class="product-preview">
+              <img src="assets/images/slider-1.jpg" class="img-responsive center-block" id="largeImgTargetWrap">
+            </div>
+          </div>
+
+          <div class="col-md-3 text-center">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, quasi!
+          </div>
+
+        </div>
       </div>
+    </section>        
+
     </div>
 
-    <div class="clear40"></div>
-    <div class="container">
-      <h2>Flex Slider - BGs - Slide or Fade - Full Screen</h2>
-      <p>Use above flexslider for sliding backgrounds. This example uses background images. Flex slider is not good with text in slides unless its just one text over all slides.</p>
-      <p>Use class <strong>show-arrows</strong> with <strong>flexslider</strong> main div, to show permanent arrows.</p>
-    </div>
-    <div class="clear40"></div>
 
     <footer class="footer">
       <div class="container">
@@ -169,49 +242,46 @@
     </div><!--.pg-wrapper ends-->
 
     <script src="assets/scripts/jquery.min.js"></script>
-    <script src="assets/scripts/jquery.easing.js"></script>
     <script src="assets/scripts/bootstrap.min.js"></script>
     <script src="assets/scripts/wow.min.js"></script>
+    <script src="assets/scripts/jquery.easing.js"></script>
     <script src="assets/scripts/jquery.flexslider-min.js"></script>
     <script src="assets/scripts/owl.carousel.min.js"></script>
     <script src="assets/scripts/custom.js"></script>
 
     <script>
-    $('.flexslider').hide();
-    $(document).ready(function(){
-      $('.flexslider').fadeIn('slow');
+    
+    $('#details-slider-wrap .thumbs a').click(function(event){
+      event.preventDefault();
+      $('#details-slider-wrap .thumbs a img').removeClass("active");
+      $(this).find("img").addClass("active");
     });
 
-      $(window).load(function() {
-        $('.flexslider').flexslider({
-          animation: "slide",
-          // animation: "fade",
+    $("#details-slider-wrap .thumbs a").click(function(event){
+     event.preventDefault();
+     var newThumb = $(this).attr("data-thumb");
+     $("#largeImgTargetWrap").attr("src",newThumb);
+    });
 
-          // easing: "swing",
-          // direction: "vertical", // direction: "horizontal",
-
-          smoothHeight: false,
-          animationSpeed: "600",
-          randomize: false,
-          pauseOnHover: true,
-          useCSS: true,
-          touch: true,
-          keyboard: true,
-
-          // dots
-          controlNav: true,
-          // continuous scroll
-          animationLoop: true,
-
-          // auto loop
-           slideshow: false
-          // slideshowSpeed: "7000",
-          // pausePlay: false,
-
-        });
-      });
-
-
+  // switch product thumb with main product image on small screen
+  // check when pages finishes loading
+    if($(window).width() <= 991) {
+       $("#details-slider-wrap .col-md-7").insertBefore("#details-slider-wrap .thumbs");
+    }
+    else {
+       $("#details-slider-wrap .thumbs").insertBefore("#details-slider-wrap .col-md-7");
+    }
+  
+  // check if page/ window is being resized manually
+  $(window).on('resize', function() {
+       if($(window).width() <= 991) { 
+        $("#details-slider-wrap .col-md-7").insertBefore("#details-slider-wrap .thumbs");
+       }
+       else
+       {
+        $("#details-slider-wrap .thumbs").insertBefore("#details-slider-wrap .col-md-7");
+       }
+    });
 
     </script>
 
