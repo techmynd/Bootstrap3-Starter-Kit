@@ -1,7 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Open+Sans:400,600,700,800');
 
+* {
+    font-smooth: always; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+
 html {position: relative; min-height: 100%;}
-body {background-color:#fff; width:100%; height:100%; overflow-x:hidden; font-family: 'Open Sans', sans-serif;}
+body {
+background-color:#fff; width:100%; height:100%; font-family: 'Open Sans', sans-serif;
+   overflow-x:hidden;
+   overflow-y: scroll; /* has to be scroll, not auto */
+   -webkit-overflow-scrolling: touch;
+}
 .pg-wrapper {height: 100%;}
 a, a:hover, img, img:hover, button, button:hover, i, i:hover {transition: all 0.3s ease-in-out;}
 a:hover, a:active, a:visited, a:focus {text-decoration:none;}
