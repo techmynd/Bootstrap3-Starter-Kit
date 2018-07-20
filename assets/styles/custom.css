@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Open+Sans:400,600,700,800');
 
 * {
-    font-smooth: always; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  font-smooth: always; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  margin:0; padding:0; 
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 html {position: relative; min-height: 100%;}
