@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  shiftColsLeftRight();
+
   /*just toggle*/
   $('.toggleTrigger').click(function(event) {
     event.preventDefault();
@@ -41,7 +43,6 @@ $(document).ready(function() {
     $(this).closest('.collapsable').find('a .fa').stop().toggleClass('fa-angle-right fa-angle-down');
   });
   // categories collapse ends
-
 
 });
 
@@ -167,3 +168,31 @@ $('#accordion').on('shown.bs.collapse', function (e) {
 });
 /////// Bootstrap Accordian FIX - move control to the top of opened tab - onclick - end
 
+
+
+
+
+// window resize triggers //
+
+jQuery(window).resize(function() {
+    // shift columns trigger
+    shiftColsLeftRight();
+});
+
+// FUNCTIONS //
+
+// shift columns for small screen
+function shiftColsLeftRight() {
+    if( jQuery(window).width() <= 991 ) {
+        //jQuery('.col-shift-left-js').insertBefore('.col-shift-right-js');
+        jQuery('.col-shift-left-js').each(function() {
+            jQuery(this).parent('.row').find('.col-shift-right-js').insertAfter(this);
+        });  
+
+    } else {
+        // jQuery('.col-shift-right-js').insertBefore('.col-shift-left-js');
+        jQuery('.col-shift-right-js').each(function() {
+            jQuery(this).parent('.row').find('.col-shift-left-js').insertAfter(this);
+        });  
+    }
+}
